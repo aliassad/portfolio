@@ -114,6 +114,102 @@
         </div>
     </section>
 
+    <!-- Hero / About Section -->
+<section id="about" class="relative pt-48 pb-32 px-6 overflow-hidden bg-[#fafafa] dark:bg-[#050505]">
+    <!-- Abstract Developer Background -->
+    <div class="absolute inset-0 -z-10">
+        <!-- Grid Pattern -->
+        <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" 
+             style="background-image: radial-gradient(#000 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <!-- Glowing Orbs -->
+        <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-[120px] bg-blue-600/20 dark:bg-blue-600/10 animate-pulse"></div>
+        <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] rounded-full blur-[120px] bg-purple-600/20 dark:bg-purple-600/10" style="animation-delay: 2s"></div>
+    </div>
+
+    <!-- Decorative Code Snippet (Floating) -->
+    <div class="absolute top-40 right-[10%] opacity-10 dark:opacity-20 hidden lg:block pointer-events-none select-none">
+        <pre class="text-blue-600 dark:text-blue-400 text-xs font-mono leading-relaxed">
+const developer = {
+  name: "Ali Assad",
+  role: "Solution Architect",
+  experience: "9+ Years",
+  status: "Available_ASAP",
+  location: "Calgary, AB"
+};
+        </pre>
+    </div>
+
+    <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+        <!-- Profile Image with Professional Framing -->
+        <div class="relative mb-12 group reveal">
+            <!-- Animated rings -->
+            <div class="absolute inset-0 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-[2.5rem] rotate-6 scale-105 opacity-20 group-hover:rotate-12 transition-all duration-500"></div>
+            <div class="absolute inset-0 border border-blue-500/20 rounded-[2.5rem] -rotate-3 group-hover:-rotate-6 transition-all duration-500"></div>
+            
+            <div class="relative w-48 h-48 md:w-56 md:h-56 rounded-[2.5rem] overflow-hidden border-4 border-white dark:border-white/10 shadow-2xl">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQENsI8xharQvw/profile-displayphoto-scale_200_200/B4DZl9tgL8IgAY-/0/1758750706849?e=2147483647&v=beta&t=iIs0RQ7WbwIIqsbwCo42OphIfLXaIeRyR-P1GHe2KVo" 
+                     alt="Ali Assad" 
+                     class="w-full h-full object-cover">
+            </div>
+            
+            <!-- Hiring Status Badge -->
+            <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/10 px-4 py-1.5 rounded-full shadow-xl flex items-center gap-2 whitespace-nowrap">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span class="text-[10px] font-black uppercase tracking-widest text-slate-900 dark:text-white">Available Immediately</span>
+            </div>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-none text-slate-900 dark:text-white reveal">
+            Engineering <span class="text-gradient">Excellence</span>
+        </h1>
+
+        <!-- High-Impact Bio -->
+        <p class="text-lg md:text-2xl max-w-3xl mx-auto mb-12 leading-relaxed text-slate-500 dark:text-slate-400 font-medium reveal">
+            Senior Full-Stack Engineer & Solution Architect with <span class="text-blue-600 dark:text-blue-400 font-bold">9+ years</span> of experience scaling software across automotive, education, and SaaS domains. 
+        </p>
+
+        <!-- CTA Action Bar -->
+        <div class="flex flex-wrap justify-center items-center gap-4 md:gap-6 reveal">
+            <!-- Primary Action -->
+            <a href="#experience" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold transition-all hover:scale-105 shadow-xl shadow-blue-600/20 flex items-center gap-2">
+                <span>View My Journey</span>
+                <i data-lucide="arrow-right" class="w-5 h-5"></i>
+            </a>
+
+            <!-- Download CV (The requested link) -->
+            <a href="/path-to-your-cv.pdf" download class="bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-900 dark:text-white px-8 py-4 md:px-10 md:py-5 rounded-2xl font-bold transition-all hover:bg-slate-50 dark:hover:bg-white/10 flex items-center gap-2">
+                <i data-lucide="download" class="w-5 h-5 text-blue-500"></i>
+                <span>Download CV</span>
+            </a>
+
+            <!-- Secondary Actions -->
+            <div class="flex items-center gap-3">
+                <a href="https://github.com/aliassad" target="_blank" class="p-4 md:p-5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 transition-all text-slate-900 dark:text-white" title="GitHub">
+                    <i data-lucide="github"></i>
+                </a>
+                <button onclick="copyEmail()" class="p-4 md:p-5 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5 hover:bg-slate-100 dark:hover:bg-white/10 transition-all text-slate-900 dark:text-white" title="Copy Email">
+                    <i data-lucide="copy"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Include this small helper for the copy email button
+    function copyEmail() {
+        const email = "aliassad2@hotmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            alert("Email copied to clipboard!");
+        });
+    }
+</script>
+
     <!-- Tech Stack / Skills Section -->
     <section id="skills" class="py-32 px-6 bg-slate-50 dark:bg-white/[0.02]">
         <div class="max-w-7xl mx-auto">
