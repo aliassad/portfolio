@@ -1,1 +1,287 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Assad | Senior Full-Stack Engineer & Solution Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); }
+        .bg-dark { background-color: #050505; }
+        .text-gradient { background: linear-gradient(to right, #3b82f6, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+        .animate-float { animation: float 3s ease-in-out infinite; }
+        .timeline-line { background: linear-gradient(to bottom, #3b82f6 0%, rgba(59, 130, 246, 0.1) 100%); }
+    </style>
+</head>
+<body class="bg-dark text-slate-300 antialiased selection:bg-blue-500/30">
 
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-xl flex items-center justify-center font-bold text-white shadow-lg shadow-blue-500/20">AA</div>
+                <span class="text-xl font-bold tracking-tight text-white hidden sm:block">Ali Assad</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="#about" class="text-xs font-bold hover:text-blue-500 transition-colors uppercase tracking-widest">About</a>
+                <a href="#skills" class="text-xs font-bold hover:text-blue-500 transition-colors uppercase tracking-widest">Skills</a>
+                <a href="#experience" class="text-xs font-bold hover:text-blue-500 transition-colors uppercase tracking-widest">The Journey</a>
+                <a href="mailto:aliassad2@hotmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-blue-600/20">Contact</a>
+            </div>
+            <button class="md:hidden text-white"><i data-lucide="menu"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="about" class="relative pt-48 pb-24 px-6 overflow-hidden">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 opacity-20">
+            <div class="absolute top-20 left-1/4 w-96 h-96 rounded-full blur-[120px] bg-blue-600"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 rounded-full blur-[120px] bg-purple-600"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <div class="relative mb-12 group">
+                <div class="absolute inset-0 bg-blue-600 rounded-[2.5rem] rotate-6 scale-105 opacity-20 group-hover:rotate-12 transition-transform duration-500"></div>
+                <div class="relative w-48 h-48 md:w-56 md:h-56 rounded-[2.5rem] overflow-hidden border-4 border-white/10 shadow-2xl">
+                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQENsI8xharQvw/profile-displayphoto-scale_200_200/B4DZl9tgL8IgAY-/0/1758750706849?e=2147483647&v=beta&t=iIs0RQ7WbwIIqsbwCo42OphIfLXaIeRyR-P1GHe2KVo" 
+                         alt="Ali Assad" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 -right-4 p-4 bg-slate-800 rounded-2xl shadow-xl border border-slate-700 animate-float">
+                    <i data-lucide="sparkles" class="text-blue-500 w-6 h-6"></i>
+                </div>
+            </div>
+
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-[10px] font-black uppercase tracking-[0.2em] mb-8">
+                Available for Solution Architecture
+            </div>
+            <h1 class="text-5xl md:text-8xl font-extrabold mb-8 tracking-tighter leading-none text-white">
+                Engineering <span class="text-gradient">Excellence</span> Since 2016
+            </h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed text-slate-400 font-medium">
+                Senior Full-Stack Engineer with 9+ years of experience. Expert in cloud-native microservices, multi-tenant SaaS, and AI-driven automation using Laravel, React, and Python.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="#experience" class="flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white px-10 py-5 rounded-2xl font-bold transition-all hover:scale-105">
+                    View Journey <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                </a>
+                <div class="flex items-center gap-4">
+                    <a href="https://linkedin.com/in/ali-assad-336019133" target="_blank" class="p-5 rounded-2xl border border-white/10 glass hover:bg-white/10 text-white transition-all">
+                        <i data-lucide="linkedin" size="24"></i>
+                    </a>
+                    <a href="https://github.com/aliassad" target="_blank" class="p-5 rounded-2xl border border-white/10 glass hover:bg-white/10 text-white transition-all">
+                        <i data-lucide="github" size="24"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-32 px-6 bg-white/[0.02]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black mb-4 text-white">Technical Arsenal</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Group 1 -->
+                <div class="p-10 rounded-[2.5rem] border border-white/5 bg-[#0a0a0c] hover:border-blue-500/30 transition-all">
+                    <h3 class="text-xl font-black mb-8 uppercase tracking-widest text-slate-500">Backend & AI</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-all">
+                                <i data-lucide="code-2" class="text-indigo-500"></i>
+                            </div>
+                            <span class="font-bold">PHP / Laravel / Yii2</span>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-all">
+                                <i data-lucide="terminal" class="text-yellow-500"></i>
+                            </div>
+                            <span class="font-bold">Python / Django / Flask</span>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-all">
+                                <i data-lucide="bot" class="text-purple-500"></i>
+                            </div>
+                            <span class="font-bold">LangChain / AI Integration</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Group 2 -->
+                <div class="p-10 rounded-[2.5rem] border border-white/5 bg-[#0a0a0c] hover:border-blue-500/30 transition-all">
+                    <h3 class="text-xl font-black mb-8 uppercase tracking-widest text-slate-500">Frontend & Mobile</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-all">
+                                <i data-lucide="monitor" class="text-blue-400"></i>
+                            </div>
+                            <span class="font-bold">React / Next.js / Redux</span>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-all">
+                                <i data-lucide="smartphone" class="text-cyan-400"></i>
+                            </div>
+                            <span class="font-bold">Angular / React Native</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Group 3 -->
+                <div class="p-10 rounded-[2.5rem] border border-white/5 bg-[#0a0a0c] hover:border-blue-500/30 transition-all">
+                    <h3 class="text-xl font-black mb-8 uppercase tracking-widest text-slate-500">Cloud & DevOps</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-all">
+                                <i data-lucide="cloud" class="text-orange-400"></i>
+                            </div>
+                            <span class="font-bold">AWS / Azure Cloud</span>
+                        </div>
+                        <div class="flex items-center gap-4 group">
+                            <div class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center group-hover:scale-110 transition-all">
+                                <i data-lucide="layers" class="text-blue-500"></i>
+                            </div>
+                            <span class="font-bold">Docker / Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="py-32 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl font-black mb-4 text-white">The Journey</h2>
+                <p class="text-slate-500 font-medium">From Sialkot to Calgary: A 9-year engineering evolution.</p>
+            </div>
+
+            <div class="relative">
+                <!-- Center Line -->
+                <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-px timeline-line hidden md:block"></div>
+
+                <div class="space-y-24">
+                    <!-- Saturn Experts -->
+                    <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 md:flex-row-reverse">
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.6)] z-10"></div>
+                        <div class="md:w-1/2 pl-8 md:pl-0 md:px-12">
+                            <div class="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0c] hover:border-blue-500/20 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full">Jul 2025 - Present</span>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Calgary, AB, Canada</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white mb-1">Senior Software Engineer</h3>
+                                <div class="text-blue-500 font-bold mb-4">Saturn Experts Inc.</div>
+                                <p class="text-sm text-slate-400 leading-relaxed mb-6">Architecting enterprise solutions, cloud cost optimization, and CI/CD reliability for modern cloud infrastructures.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Laravel</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">React</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Azure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- AutoCenter -->
+                    <div class="relative flex flex-col md:flex-row gap-8 md:gap-0">
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.6)] z-10"></div>
+                        <div class="md:w-1/2 pl-8 md:pl-0 md:px-12">
+                            <div class="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0c] hover:border-blue-500/20 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full">Jul 2022 - Jun 2025</span>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Remote (USA/Global)</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white mb-1">Principal Engineer & Team Lead</h3>
+                                <div class="text-blue-500 font-bold mb-4">AutoCenter LLC</div>
+                                <p class="text-sm text-slate-400 leading-relaxed mb-6">Led a global team of 8. Built multi-tenant SaaS serving 50+ dealerships. Developed AI RAG pipelines for automated document analysis.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Laravel</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Angular</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Python AI</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Arbisoft -->
+                    <div class="relative flex flex-col md:flex-row gap-8 md:gap-0 md:flex-row-reverse">
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.6)] z-10"></div>
+                        <div class="md:w-1/2 pl-8 md:pl-0 md:px-12">
+                            <div class="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0c] hover:border-blue-500/20 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full">Sep 2019 - Jun 2022</span>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Lahore, Pakistan</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white mb-1">Senior Software Engineer</h3>
+                                <div class="text-blue-500 font-bold mb-4">Arbisoft</div>
+                                <p class="text-sm text-slate-400 leading-relaxed mb-6">Mentored 100+ engineers on Clean Code. Containerized legacy platforms using Docker, cutting dev setup time by 50%.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Python</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Docker</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Open edX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bayt/vFairs -->
+                    <div class="relative flex flex-col md:flex-row gap-8 md:gap-0">
+                        <div class="absolute left-0 md:left-1/2 md:-translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 shadow-[0_0_20px_rgba(37,99,235,0.6)] z-10"></div>
+                        <div class="md:w-1/2 pl-8 md:pl-0 md:px-12">
+                            <div class="p-8 rounded-[2rem] border border-white/5 bg-[#0a0a0c] hover:border-blue-500/20 transition-all">
+                                <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full">May 2017 - Aug 2019</span>
+                                    <span class="text-[10px] font-black uppercase tracking-widest text-slate-500">Lahore, Pakistan</span>
+                                </div>
+                                <h3 class="text-2xl font-black text-white mb-1">Software Engineer</h3>
+                                <div class="text-blue-500 font-bold mb-4">Bayt.com / vFairs</div>
+                                <p class="text-sm text-slate-400 leading-relaxed mb-6">Developed a no-code Angular builder. Top Performer Q2 2018 for high-concurrency event platform optimizations.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Yii2</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">Angular</span>
+                                    <span class="text-[9px] font-bold uppercase bg-white/5 px-2 py-1 rounded">AWS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-32 px-6 border-t border-white/5 bg-[#050505]">
+        <div class="max-w-7xl mx-auto flex flex-col items-center text-center">
+            <div class="w-20 h-20 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-3xl flex items-center justify-center font-black text-white text-3xl mb-10 shadow-2xl shadow-blue-500/40">AA</div>
+            <h2 class="text-4xl md:text-6xl font-black mb-8 tracking-tighter text-white">Let's Scale Together.</h2>
+            
+            <div class="flex flex-col sm:flex-row gap-6 mb-20 w-full max-w-2xl">
+                <a href="mailto:aliassad2@hotmail.com" class="flex-1 flex items-center justify-center gap-3 p-6 rounded-3xl border border-white/5 bg-white/5 hover:bg-white/10 transition-all">
+                    <i data-lucide="mail" class="text-blue-500"></i>
+                    <span class="font-black text-sm uppercase tracking-widest">aliassad2@hotmail.com</span>
+                </a>
+                <div class="flex-1 flex items-center justify-center gap-3 p-6 rounded-3xl border border-white/5 bg-white/5">
+                    <i data-lucide="terminal" class="text-cyan-500"></i>
+                    <span class="font-black text-sm uppercase tracking-widest text-blue-500">+1 403 613 8920</span>
+                </div>
+            </div>
+
+            <div class="text-slate-800 text-[10px] font-black uppercase tracking-[0.5em]">
+                Ali Assad © 2026 • Solution Architect
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle logic could go here
+    </script>
+</body>
+</html>
