@@ -239,33 +239,7 @@
 
     <!-- Technical Arsenal Section -->
      <style>
-        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
-        
-        :root {
-            --bg-dark: #020617;
-            --accent-indigo: #6366f1;
-            --card-bg: rgba(15, 23, 42, 0.4);
-            --border-glow: rgba(99, 102, 241, 0.2);
-        }
-
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-dark);
-            color: #f8fafc;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-        }
-
-        .mesh-bg {
-            position: fixed;
-            inset: 0;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(30, 41, 59, 0.6) 0px, transparent 50%);
-            z-index: -1;
-        }
-
+    
         .bento-card {
             background: var(--card-bg);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -526,17 +500,6 @@
             });
         });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.classList.add('active');
-                    }, index * 100);
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
     </script>
 
     
