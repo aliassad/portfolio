@@ -3,780 +3,686 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ali Assad, Principal Software Engineer</title>
-<meta name="description" content="Ali Assad is a principal software engineer in Calgary building multi-tenant platforms, APIs and the teams that run them. Laravel, Django, React, AWS, Azure.">
-<meta property="og:title" content="Ali Assad, Principal Software Engineer">
-<meta property="og:description" content="Ten years building enterprise systems that hold up under load.">
+<title>Ali Assad | Principal Software Engineer, Calgary</title>
+<meta name="description" content="Ali Assad is a principal software engineer in Calgary with 10+ years building multi-tenant platforms, APIs and distributed teams. Laravel, Django, React, AWS and Azure.">
+<meta name="theme-color" content="#000000">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ali Assad | Principal Software Engineer">
+<meta property="og:description" content="10+ years building enterprise systems that scale. Laravel, Django, React, AWS, Azure.">
 <meta property="og:image" content="https://aliassad.github.io/portfolio/profile.png">
-<meta name="theme-color" content="#142033">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000'/%3E%3Cpath d='M14 44 28 20l8 14 4-6 10 16' fill='none' stroke='%234d9fff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --dusk:#142033;      /* base: Calgary dusk sky */
-  --dusk-2:#1A2940;    /* raised surface */
-  --dusk-3:#22344F;    /* hover surface */
-  --line:#2F4566;      /* rules, edges */
-  --mist:#8FA3BF;      /* secondary text */
-  --snow:#EEF1F5;      /* primary text */
-  --lamp:#FFB45C;      /* warm accent: packets, focus, action */
-  --glass:#7FB2FF;     /* cool accent: links, nodes */
-  --display:'Bricolage Grotesque',system-ui,sans-serif;
-  --mono:'IBM Plex Mono',ui-monospace,monospace;
-  --ease:cubic-bezier(.2,.8,.2,1);
-  --gutter:clamp(20px,5vw,72px);
-}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{font-family:var(--display);font-variation-settings:'opsz' 16;background:var(--dusk);color:var(--snow);line-height:1.55;font-size:17px;overflow-x:hidden}
-::selection{background:var(--lamp);color:var(--dusk)}
-a{color:inherit}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
-:focus-visible{outline:2px solid var(--lamp);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1240px;margin:0 auto;padding:0 var(--gutter)}
-.mono{font-family:var(--mono);font-size:.78rem;letter-spacing:0}
-.skip{position:absolute;left:-999px;top:8px;background:var(--lamp);color:var(--dusk);padding:8px 14px;border-radius:6px;z-index:9999}
-.skip:focus{left:8px}
-
-/* ---------- boot sequence ---------- */
-#boot{position:fixed;inset:0;z-index:2000;background:var(--dusk);display:grid;place-items:center;transition:opacity .6s var(--ease),visibility .6s}
-#boot.done{opacity:0;visibility:hidden}
-.boot-box{width:min(520px,86vw)}
-.boot-log{font-family:var(--mono);font-size:.82rem;color:var(--mist);min-height:9.5em;white-space:pre-wrap}
-.boot-log b{color:var(--snow);font-weight:500}
-.boot-log i{font-style:normal;color:var(--lamp)}
-.boot-bar{height:2px;background:var(--line);margin-top:18px;overflow:hidden;border-radius:2px}
-.boot-bar span{display:block;height:100%;width:0;background:var(--lamp);transition:width .25s linear}
-.boot-skip{margin-top:14px;font-family:var(--mono);font-size:.72rem;color:var(--mist)}
-
-/* ---------- nav ---------- */
-.nav{position:fixed;top:0;left:0;right:0;z-index:100;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
-.nav.solid{background:rgba(20,32,51,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:20px}
-.brand{font-weight:700;font-size:1.05rem;text-decoration:none;font-variation-settings:'wdth' 85,'opsz' 24;display:flex;align-items:center;gap:10px}
-.brand-dot{width:9px;height:9px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 0 rgba(74,222,128,.6);animation:beat 2.4s infinite}
-@keyframes beat{0%{box-shadow:0 0 0 0 rgba(74,222,128,.55)}70%{box-shadow:0 0 0 10px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
-.nav-links{display:flex;gap:26px;align-items:center}
-.nav-links a{text-decoration:none;color:var(--mist);font-size:.95rem;transition:color .2s;position:relative}
-.nav-links a:hover,.nav-links a.active{color:var(--snow)}
-.nav-links a.active::after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--lamp);border-radius:2px}
-.kbtn{display:flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid var(--line);border-radius:8px;color:var(--mist);font-size:.85rem;transition:border-color .2s,color .2s}
-.kbtn:hover{border-color:var(--glass);color:var(--snow)}
-kbd{font-family:var(--mono);font-size:.7rem;padding:1px 6px;border:1px solid var(--line);border-radius:4px;color:var(--mist)}
-#progress{position:fixed;top:0;left:0;height:2px;background:var(--lamp);width:100%;transform-origin:0 50%;transform:scaleX(0);z-index:101}
-
-/* ---------- hero ---------- */
-.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;padding:110px 0 70px}
-#graph{position:absolute;inset:0;width:100%;height:100%;cursor:crosshair}
-.hero::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--dusk) 0%,rgba(20,32,51,.85) 34%,rgba(20,32,51,.15) 70%,rgba(20,32,51,.5) 100%),linear-gradient(0deg,var(--dusk) 0%,transparent 22%)}
-.hero .wrap{position:relative;z-index:2;width:100%;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr);gap:48px;align-items:center;pointer-events:none}
-.hero .wrap > *{pointer-events:auto}
-.hello{color:var(--mist);font-size:1.05rem;margin-bottom:10px}
-.hello a{color:var(--glass);text-decoration:none;border-bottom:1px solid rgba(127,178,255,.35)}
-.name{font-size:clamp(64px,11.5vw,168px);line-height:.86;letter-spacing:-.03em;font-weight:500;font-variation-settings:'wght' 500,'wdth' 92,'opsz' 96;user-select:none;white-space:nowrap}
-.name span{display:inline-block;transition:font-variation-settings .35s var(--ease),color .35s;will-change:font-variation-settings}
-.name .sp{width:.22em}
-.lede{font-size:clamp(19px,1.9vw,24px);line-height:1.4;max-width:30ch;margin-top:26px;color:var(--snow);font-variation-settings:'opsz' 24}
-.lede em{font-style:normal;color:var(--mist)}
-.ctas{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:999px;font-weight:600;font-size:.98rem;text-decoration:none;transition:background .25s,color .25s,border-color .25s,transform .25s var(--ease);will-change:transform}
-.btn-lamp{background:var(--lamp);color:var(--dusk)}
-.btn-lamp:hover{background:#FFC67F}
-.btn-line{border:1px solid var(--line);color:var(--snow)}
-.btn-line:hover{border-color:var(--glass)}
-.telemetry{display:flex;gap:28px;margin-top:44px;flex-wrap:wrap;color:var(--mist)}
-.telemetry div{display:flex;flex-direction:column;gap:2px}
-.telemetry strong{font-family:var(--mono);font-weight:500;color:var(--snow);font-size:1rem}
-.telemetry small{font-size:.82rem}
-.hint{margin-top:16px;font-size:.85rem;color:var(--mist);display:flex;align-items:center;gap:8px}
-.hint::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--lamp);box-shadow:0 0 12px var(--lamp)}
-
-.portrait{position:relative;justify-self:end;width:min(360px,100%);aspect-ratio:4/5;border-radius:22px;overflow:hidden;transform-style:preserve-3d;transition:transform .5s var(--ease);box-shadow:0 30px 80px rgba(5,10,20,.55)}
-.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block;transform:scale(1.06);transition:transform .6s var(--ease)}
-.portrait:hover img{transform:scale(1.1)}
-.portrait::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at var(--gx,50%) var(--gy,30%),rgba(255,180,92,.22),transparent 45%);pointer-events:none;mix-blend-mode:screen}
-.portrait figcaption{position:absolute;left:14px;bottom:14px;right:14px;display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-radius:12px;background:rgba(20,32,51,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:.85rem}
-.portrait figcaption span:last-child{color:#4ADE80;display:flex;align-items:center;gap:6px}
-
-/* ---------- sections ---------- */
-section{position:relative}
-.block{padding:clamp(90px,12vw,150px) 0}
-.h2{font-size:clamp(40px,6vw,84px);line-height:.95;letter-spacing:-.025em;font-weight:600;font-variation-settings:'wdth' 82,'opsz' 96;max-width:16ch}
-.intro{color:var(--mist);max-width:56ch;margin-top:18px;font-size:1.08rem}
-
-/* stack explorer */
-.stack-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:34px 40px;margin-top:56px}
-.stack-group h3{font-size:1rem;font-weight:600;color:var(--mist);margin-bottom:14px;font-variation-settings:'opsz' 16}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{padding:8px 14px;border-radius:999px;border:1px solid var(--line);font-size:.95rem;transition:background .2s,border-color .2s,color .2s,transform .2s var(--ease)}
-.chip:hover{border-color:var(--glass);transform:translateY(-2px)}
-.chip[aria-pressed="true"]{background:var(--lamp);color:var(--dusk);border-color:var(--lamp)}
-.chip .n{font-family:var(--mono);font-size:.72rem;opacity:.6;margin-left:6px}
-.stack-readout{margin-top:40px;min-height:64px;padding:18px 22px;border-left:2px solid var(--lamp);background:var(--dusk-2);border-radius:0 12px 12px 0;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.stack-readout p{font-size:1.05rem}
-.stack-readout p b{color:var(--lamp);font-weight:600}
-.clear-btn{color:var(--mist);font-size:.9rem;text-decoration:underline;text-underline-offset:3px}
-.clear-btn:hover{color:var(--snow)}
-
-/* career: horizontal pinned */
-#career{background:linear-gradient(180deg,var(--dusk),#11192A 60%,var(--dusk))}
-.career-pin{height:var(--pin-h,auto)}
-.career-sticky{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
-.career-head{padding-top:64px}
-.career-head .h2{font-size:clamp(36px,4.6vw,64px)}
-.career-head .wrap{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap}
-.career-meter{display:flex;align-items:center;gap:14px;color:var(--mist);font-size:.9rem}
-.career-meter .bar{width:160px;height:2px;background:var(--line);border-radius:2px;overflow:hidden}
-.career-meter .bar span{display:block;height:100%;background:var(--lamp);width:0}
-.track{display:flex;gap:28px;padding:34px var(--gutter) 26px;align-items:flex-start;will-change:transform;width:max-content}
-.role{width:min(440px,82vw);flex-shrink:0;background:var(--dusk-2);border:1px solid var(--line);border-radius:20px;padding:26px 28px;position:relative;transition:opacity .35s,border-color .35s,transform .35s var(--ease)}
-.role .yr{font-family:var(--mono);color:var(--lamp);font-size:.8rem}
-.role h3{font-size:1.8rem;line-height:1;margin:10px 0 6px;font-weight:650;font-variation-settings:'wdth' 85,'opsz' 48,'wght' 650;letter-spacing:-.015em}
-.role .title{color:var(--glass);font-weight:500}
-.role .place{color:var(--mist);font-size:.9rem;margin-top:2px}
-.role .metric{display:flex;align-items:baseline;gap:10px;margin:16px 0 2px}
-.role .metric strong{font-size:2.6rem;font-weight:700;line-height:1;font-variation-settings:'wdth' 78,'opsz' 72,'wght' 700}
-.role .metric span{color:var(--mist);font-size:.92rem}
-.role ul{list-style:none;margin-top:14px;display:grid;gap:7px}
-.role li{font-size:.92rem;color:#CBD5E2;padding-left:16px;position:relative;line-height:1.5}
-.role li::before{content:'';position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;border:1.5px solid var(--glass)}
-.role .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:18px}
-.tag{font-family:var(--mono);font-size:.7rem;padding:3px 8px;border-radius:6px;background:rgba(127,178,255,.08);color:var(--mist)}
-.tag.hit{background:var(--lamp);color:var(--dusk)}
-.role.now{border-color:rgba(255,180,92,.5)}
-.role.now::before{content:'Current role';position:absolute;top:-11px;right:24px;background:var(--lamp);color:var(--dusk);font-size:.75rem;font-weight:600;padding:2px 10px;border-radius:999px}
-.dim{opacity:.28}
-.lit{border-color:var(--lamp)!important}
-.rail{position:relative;height:2px;background:var(--line);margin:0 var(--gutter)}
-.rail span{position:absolute;left:0;top:0;height:100%;background:linear-gradient(90deg,var(--glass),var(--lamp));width:0}
-
-/* projects */
-.proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:56px;perspective:1200px}
-.proj{position:relative;text-align:left;background:var(--dusk-2);border:1px solid var(--line);border-radius:20px;padding:28px;min-height:280px;display:flex;flex-direction:column;transform-style:preserve-3d;transition:transform .45s var(--ease),border-color .3s,opacity .35s;overflow:hidden}
-.proj::before{content:'';position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),rgba(127,178,255,.13),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
-.proj:hover::before,.proj:focus-visible::before{opacity:1}
-.proj:hover{border-color:rgba(127,178,255,.5)}
-.proj .glyph{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--dusk-3);margin-bottom:22px;transform:translateZ(30px)}
-.proj .glyph svg{width:24px;height:24px;stroke:var(--lamp);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.proj h3{font-size:1.45rem;line-height:1.1;font-weight:620;font-variation-settings:'wdth' 88,'opsz' 32,'wght' 620;transform:translateZ(24px)}
-.proj p{color:var(--mist);margin-top:10px;font-size:.96rem;flex:1;transform:translateZ(14px)}
-.proj .open{margin-top:20px;font-size:.9rem;color:var(--glass);display:flex;align-items:center;gap:8px;transform:translateZ(18px)}
-.proj .open svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;transition:transform .25s var(--ease)}
-.proj:hover .open svg{transform:translate(3px,-3px)}
-
-/* project dialog */
-dialog{margin:auto;border:1px solid var(--line);background:var(--dusk-2);color:var(--snow);border-radius:22px;width:min(680px,92vw);max-height:88vh;padding:0;overflow:auto}
-dialog::backdrop{background:rgba(8,14,24,.7);backdrop-filter:blur(6px)}
-dialog[open]{animation:pop .4s var(--ease)}
-@keyframes pop{from{opacity:0;transform:translateY(24px) scale(.97)}to{opacity:1;transform:none}}
-.dlg-in{padding:34px}
-.dlg-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
-.dlg-in h3{font-size:2.2rem;line-height:1;font-weight:650;font-variation-settings:'wdth' 82,'opsz' 72,'wght' 650}
-.dlg-in .where{color:var(--glass);margin-top:8px}
-.dlg-in p{color:#CBD5E2;margin-top:18px;font-size:1.02rem}
-.dlg-in h4{margin-top:24px;font-size:.95rem;color:var(--mist);font-weight:500}
-.close{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;flex-shrink:0}
-.close:hover{border-color:var(--lamp)}
-
-/* terminal */
-.term-sec .wrap{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:center}
-.term{background:#0E1726;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(5,10,20,.5)}
-.term-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line);color:var(--mist);font-family:var(--mono);font-size:.75rem}
-.term-bar i{width:11px;height:11px;border-radius:50%;background:var(--line)}
-.term-bar i:nth-child(1){background:#FF6B6B}.term-bar i:nth-child(2){background:#FFD166}.term-bar i:nth-child(3){background:#4ADE80}
-.term-bar span{margin-left:10px}
-.term-out{height:340px;overflow-y:auto;padding:18px 20px 6px;font-family:var(--mono);font-size:.84rem;line-height:1.7;color:#CBD5E2;white-space:pre-wrap;word-break:break-word}
-.term-out .c{color:var(--lamp)}
-.term-out .g{color:#4ADE80}
-.term-out .b{color:var(--glass)}
-.term-out .m{color:var(--mist)}
-.term-out a{color:var(--glass)}
-.term-in{display:flex;align-items:center;gap:10px;padding:10px 20px 18px;font-family:var(--mono);font-size:.84rem}
-.term-in label{color:#4ADE80;white-space:nowrap}
-.term-in input{flex:1;background:none;border:0;color:var(--snow);font:inherit;outline:none;caret-color:var(--lamp);min-width:0}
-.sugg{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.sugg button{font-family:var(--mono);font-size:.8rem;padding:7px 12px;border:1px solid var(--line);border-radius:8px;color:var(--mist);transition:color .2s,border-color .2s}
-.sugg button:hover{color:var(--snow);border-color:var(--lamp)}
-
-/* recognition */
-.rec{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px}
-.rec h3{font-size:1rem;color:var(--mist);font-weight:500;margin-bottom:8px}
-.rec ol{list-style:none}
-.rec li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line);transition:padding .3s var(--ease)}
-.rec li:hover{padding-left:10px}
-.rec .y{font-family:var(--mono);color:var(--lamp);font-size:.85rem;padding-top:4px}
-.rec strong{display:block;font-size:1.2rem;font-weight:600;font-variation-settings:'opsz' 24,'wght' 600}
-.rec span.o{color:var(--mist);font-size:.95rem}
-
-/* contact */
-.contact{text-align:left;padding-bottom:120px}
-.big{font-size:clamp(52px,10vw,150px);line-height:.88;letter-spacing:-.035em;font-weight:600;font-variation-settings:'wdth' 78,'opsz' 96,'wght' 600}
-.big a{text-decoration:none;background:linear-gradient(var(--lamp),var(--lamp)) 0 92%/0 6px no-repeat;transition:background-size .5s var(--ease)}
-.big a:hover{background-size:100% 6px}
-.contact-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:64px;border-top:1px solid var(--line)}
-.c-item{padding:24px 20px 24px 0;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:6px;text-decoration:none;min-width:0}
-.c-item:last-child{border-right:0}
-.c-item + .c-item{padding-left:20px}
-.c-item small{color:var(--mist);font-size:.88rem}
-.c-item span{font-size:1.05rem;font-weight:500;overflow-wrap:anywhere}
-a.c-item:hover span,button.c-item:hover span{color:var(--lamp)}
-button.c-item{text-align:left}
-footer{border-top:1px solid var(--line);padding:26px 0;color:var(--mist);font-size:.9rem}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-
-/* toast */
-#toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,30px);opacity:0;background:var(--snow);color:var(--dusk);padding:12px 20px;border-radius:999px;font-weight:600;font-size:.95rem;z-index:3000;transition:opacity .3s,transform .4s var(--ease);pointer-events:none}
-#toast.on{opacity:1;transform:translate(-50%,0)}
-
-/* command palette */
-#palette{width:min(560px,92vw);top:14vh;margin:0 auto;position:fixed}
-#palette[open]{animation:pop .3s var(--ease)}
-.pal-in{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line)}
-.pal-in input{flex:1;background:none;border:0;color:var(--snow);font:inherit;font-size:1.05rem;outline:none}
-.pal-list{list-style:none;padding:8px;max-height:52vh;overflow:auto}
-.pal-list li{padding:11px 14px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;gap:12px}
-.pal-list li small{color:var(--mist);font-size:.82rem}
-.pal-list li[aria-selected="true"]{background:var(--dusk-3)}
-.pal-list li[aria-selected="true"] span{color:var(--lamp)}
-.pal-empty{padding:16px;color:var(--mist)}
-
-/* cursor halo (fine pointers only) */
-#halo{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:1.5px solid rgba(255,180,92,.55);pointer-events:none;z-index:2500;transition:width .3s var(--ease),height .3s var(--ease),margin .3s var(--ease),background .3s,opacity .3s;opacity:0}
-#halo.big{width:64px;height:64px;margin:-32px 0 0 -32px;background:rgba(255,180,92,.08)}
-@media (pointer:fine){#halo{opacity:1}}
-
-/* reveal: one orchestrated entrance for headings only */
-.rv{opacity:0;transform:translateY(30px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
-.rv.in{opacity:1;transform:none}
-
-/* responsive */
-@media (max-width:1000px){
-  .hero .wrap{grid-template-columns:1fr}
-  .portrait{justify-self:start;width:min(300px,70%);aspect-ratio:1/1;order:-1}
-  .hero::after{background:linear-gradient(0deg,var(--dusk) 10%,rgba(20,32,51,.78) 60%,rgba(20,32,51,.55))}
-  .proj-grid{grid-template-columns:1fr 1fr}
-  .term-sec .wrap{grid-template-columns:1fr}
-  .rec{grid-template-columns:1fr;gap:40px}
-  .contact-row{grid-template-columns:1fr 1fr}
-  .c-item:nth-child(2){border-right:0}
-  .c-item:nth-child(3){padding-left:0}
-  .c-item:nth-child(n+3){border-top:1px solid var(--line)}
-}
-@media (max-width:760px){
-  .nav-links a{display:none}
-  .proj-grid{grid-template-columns:1fr}
-  .name{font-size:clamp(56px,17vw,120px)}
-  .contact-row{grid-template-columns:1fr}
-  .c-item{border-right:0!important;padding-left:0!important;border-top:1px solid var(--line)}
-}
-/* vertical career when horizontal pin is off */
-.career-flat .career-sticky{position:static;height:auto;overflow:visible;display:block}
-.career-flat .track{flex-direction:column;width:auto;transform:none!important;padding-top:40px}
-.career-flat .role{width:100%;max-width:640px}
-.career-flat .rail,.career-flat .career-meter{display:none}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
-  .rv{opacity:1;transform:none}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/sections.css">
+<link rel="stylesheet" href="css/fx.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Ali Assad","jobTitle":"Principal Software Engineer","address":{"@type":"PostalAddress","addressLocality":"Calgary","addressRegion":"AB","addressCountry":"CA"},"email":"mailto:ali.n.assad@gmail.com","url":"https://aliassad.github.io/portfolio/","sameAs":["https://github.com/aliassad","https://linkedin.com/in/ali-assad-336019133"],"worksFor":{"@type":"Organization","name":"Saturn Experts"}}
+</script>
 </head>
-<body>
-<a href="#main" class="skip">Skip to content</a>
+<body class="booting">
+<a href="#main" class="skip">skip_to_content</a>
 
 <div id="boot" aria-hidden="true">
   <div class="boot-box">
     <div class="boot-log" id="bootLog"></div>
     <div class="boot-bar"><span id="bootBar"></span></div>
-    <div class="boot-skip">Press any key or click to skip</div>
+    <div class="boot-skip">press any key to skip</div>
   </div>
 </div>
 
 <div id="progress"></div>
-<div id="halo"></div>
+<div id="cur"></div><div id="ring"></div>
 
-<header class="nav" id="nav">
-  <div class="wrap">
-    <a class="brand" href="#top"><span class="brand-dot" aria-hidden="true"></span>Ali Assad</a>
-    <nav class="nav-links" aria-label="Sections">
-      <a href="#stack">Stack</a>
-      <a href="#career">Career</a>
-      <a href="#projects">Projects</a>
-      <a href="#terminal">Terminal</a>
-      <a href="#contact">Contact</a>
-      <button class="kbtn" id="openPal" aria-haspopup="dialog">Jump to <kbd id="kHint">Ctrl K</kbd></button>
-    </nav>
+<!-- NAV -->
+<nav id="nav" aria-label="Primary">
+  <a href="#hero" class="nav-logo"><span class="prompt">~/</span>ali-assad<span class="caret">█</span></a>
+  <div class="nav-links">
+    <a href="#skills" class="nl">skills</a>
+    <a href="#experience" class="nl">experience</a>
+    <a href="#projects" class="nl">projects</a>
+    <a href="#awards" class="nl">awards</a>
+    <a href="#contact" class="nl last">contact</a>
+    <button class="kbtn" id="openPal" aria-haspopup="dialog" aria-label="Open command palette"><kbd id="kHint">Ctrl K</kbd></button>
+    <a href="#contact" class="nav-cta">hire_me()</a>
   </div>
-</header>
+</nav>
 
 <main id="main">
-<!-- HERO -->
-<section class="hero" id="top" aria-label="Introduction">
-  <canvas id="graph" aria-hidden="true"></canvas>
-  <div class="wrap">
-    <div>
-      <p class="hello">Principal software engineer in Calgary, open to <a href="#contact">new roles and projects</a></p>
-      <h1 class="name" id="name" aria-label="Ali Assad">Ali Assad</h1>
-      <p class="lede">I build multi-tenant platforms, APIs and the teams that keep them running. <em>Ten years of Laravel, Django and React, shipped on AWS and Azure.</em></p>
-      <div class="ctas">
-        <a href="#projects" class="btn btn-lamp mag">See my work</a>
-        <a href="#terminal" class="btn btn-line mag">Try the terminal</a>
-      </div>
-      <div class="telemetry" aria-live="off">
-        <div><strong id="tReq">0</strong><small>requests you've sent</small></div>
-        <div><strong id="tLat">38 ms</strong><small>p95 latency</small></div>
-        <div><strong>99.9%</strong><small>uptime delivered at VFairs</small></div>
-      </div>
-      <p class="hint">Click anywhere on the graph to send traffic through my stack</p>
-    </div>
-    <figure class="portrait" id="portrait">
-      <img src="profile.webp" alt="Ali Assad in an office overlooking downtown Calgary at dusk" width="640" height="640">
-      <figcaption><span>Calgary, Alberta</span><span><i class="brand-dot" aria-hidden="true"></i>Available</span></figcaption>
-    </figure>
-  </div>
-</section>
+<!-- ================= HERO ================= -->
+<section class="hero-wrap" id="hero" aria-label="Introduction">
+  <div class="aurora" aria-hidden="true"><i class="a1"></i><i class="a2"></i><i class="a3"></i></div>
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-dots" aria-hidden="true"></div>
 
-<!-- STACK -->
-<section class="block" id="stack" aria-labelledby="stackH">
-  <div class="wrap">
-    <h2 class="h2 rv" id="stackH">Pick a technology. See where I've shipped it.</h2>
-    <p class="intro">Every chip below filters my career and projects on this page. The number shows how many of my roles and projects used it.</p>
-    <div class="stack-grid" id="stackGrid"></div>
-    <div class="stack-readout" aria-live="polite">
-      <p id="readout">Nothing selected. Choose a technology above.</p>
-      <button class="clear-btn" id="clearTech" hidden>Clear selection</button>
-    </div>
-  </div>
-</section>
+  <div class="hero">
+    <div class="hero-left">
+      <div class="term-bar">
+        <div class="tds"><div class="td" style="background:#ff5f57"></div><div class="td" style="background:#febc2e"></div><div class="td" style="background:#28c840"></div></div>
+        <span class="path">~/portfolio</span><span style="color:var(--text3)">—</span><span>bash</span>
+        <div class="live-tag"><div class="dot-live"></div>Available</div>
+      </div>
 
-<!-- CAREER -->
-<section id="career" aria-labelledby="careerH">
-  <div class="career-pin" id="careerPin">
-    <div class="career-sticky">
-      <div class="career-head">
-        <div class="wrap">
-          <h2 class="h2 rv" id="careerH">Ten years, five teams.</h2>
-          <div class="career-meter"><span id="careerYr">2016</span><div class="bar"><span id="careerBar"></span></div><span>Now</span></div>
+      <h1 class="hero-name" id="heroName" aria-label="Ali Assad.">Ali Assad.</h1>
+      <div class="hero-role" aria-live="off">
+        <span class="syn-kw">const</span> <span class="syn-fn">engineer</span><span class="syn-pun"> = </span><span class="syn-str">"</span><span class="type" id="typed"></span><span class="syn-str">"</span><span class="syn-pun">;</span><span class="tcaret"></span>
+      </div>
+
+      <div class="code-card">
+        <div class="cc-bar">
+          <div class="tds"><div class="td" style="background:#ff5f57"></div><div class="td" style="background:#febc2e"></div><div class="td" style="background:#28c840"></div></div>
+          <span class="cc-fname">ali-assad.<span>ts</span></span>
+        </div>
+        <div class="cc-body">
+          <div class="cl" style="--l:0"><span class="ln">1</span><span class="syn-cm">// 10+ years building enterprise systems</span></div>
+          <div class="cl" style="--l:1"><span class="ln">2</span><span class="syn-kw">class </span><span class="syn-cls">AliAssad </span><span class="syn-kw">extends </span><span class="syn-cls">Engineer </span><span class="syn-pun">{</span></div>
+          <div class="cl" style="--l:2"><span class="ln">3</span>&nbsp;&nbsp;<span class="syn-prop">location</span><span class="syn-pun"> = </span><span class="syn-str">"Calgary, AB 🇨🇦"</span><span class="syn-pun">;</span></div>
+          <div class="cl" style="--l:3"><span class="ln">4</span>&nbsp;&nbsp;<span class="syn-prop">experience</span><span class="syn-pun"> = </span><span class="syn-num">10</span><span class="syn-pun">; </span><span class="syn-cm">// years</span></div>
+          <div class="cl" style="--l:4"><span class="ln">5</span>&nbsp;&nbsp;<span class="syn-prop">stack</span><span class="syn-pun"> = [</span><span class="syn-str">"Laravel"</span><span class="syn-pun">, </span><span class="syn-str">"Django"</span><span class="syn-pun">, </span><span class="syn-str">"React"</span><span class="syn-pun">];</span></div>
+          <div class="cl" style="--l:5"><span class="ln">6</span>&nbsp;&nbsp;<span class="syn-prop">cloud</span><span class="syn-pun"> = [</span><span class="syn-str">"AWS"</span><span class="syn-pun">, </span><span class="syn-str">"Azure"</span><span class="syn-pun">];</span></div>
+          <div class="cl" style="--l:6"><span class="ln">7</span>&nbsp;</div>
+          <div class="cl" style="--l:7"><span class="ln">8</span>&nbsp;&nbsp;<span class="syn-fn">build</span><span class="syn-pun">(</span><span style="color:var(--text2)">product</span><span class="syn-pun">) {</span></div>
+          <div class="cl" style="--l:8"><span class="ln">9</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="syn-kw">return </span><span style="color:var(--text2)">product</span><span class="syn-pun">.</span><span class="syn-fn">scale</span><span class="syn-pun">(</span><span class="syn-num">Infinity</span><span class="syn-pun">);</span></div>
+          <div class="cl" style="--l:9"><span class="ln">10</span>&nbsp;&nbsp;<span class="syn-pun">}</span></div>
+          <div class="cl" style="--l:10"><span class="ln">11</span><span class="syn-pun">}</span></div>
         </div>
       </div>
-      <div class="track" id="track"></div>
-      <div class="rail"><span id="rail"></span></div>
+
+      <div class="hero-btns">
+        <a href="#contact" class="btn-p mag">get_in_touch</a>
+        <a href="#experience" class="btn-g mag">view_work</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="st"><div class="sn"><span data-count="10">0</span><span class="sp">+</span></div><div class="sl">yrs_exp</div></div>
+        <div class="st"><div class="sn"><span data-count="50">0</span><span class="sp">+</span></div><div class="sl">clients</div></div>
+        <div class="st"><div class="sn"><span data-count="40">0</span><span class="sp">%</span></div><div class="sl">faster</div></div>
+        <div class="st"><div class="sn"><span data-count="20">0</span><span class="sp">+</span></div><div class="sl">eng_led</div></div>
+      </div>
+    </div>
+
+    <div class="hero-right" id="heroRight">
+      <div class="p-glow"></div><div class="p-glow2"></div>
+      <div class="orbit o1" aria-hidden="true">
+        <span style="--a:0;--r:260px"><i class="devicon-laravel-plain colored"></i></span>
+        <span style="--a:60;--r:260px"><i class="devicon-react-original colored"></i></span>
+        <span style="--a:120;--r:260px"><i class="devicon-python-plain colored"></i></span>
+        <span style="--a:180;--r:260px"><i class="devicon-php-plain colored"></i></span>
+        <span style="--a:240;--r:260px"><i class="devicon-django-plain colored"></i></span>
+        <span style="--a:300;--r:260px"><i class="devicon-typescript-plain colored"></i></span>
+      </div>
+      <div class="orbit o2" aria-hidden="true">
+        <span style="--a:30;--r:340px"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></span>
+        <span style="--a:90;--r:340px"><i class="devicon-azure-plain colored"></i></span>
+        <span style="--a:150;--r:340px"><i class="devicon-docker-plain colored"></i></span>
+        <span style="--a:210;--r:340px"><i class="devicon-redis-plain colored"></i></span>
+        <span style="--a:270;--r:340px"><i class="devicon-postgresql-plain colored"></i></span>
+        <span style="--a:330;--r:340px"><i class="devicon-nodejs-plain colored"></i></span>
+      </div>
+      <div class="p-code" aria-hidden="true">
+        <div>&lt;<span class="hl">Engineer</span></div>
+        <div>&nbsp;role=<span class="hl2">"Principal"</span></div>
+        <div>&nbsp;yoe={<span class="hl">10</span>}</div>
+        <div>&nbsp;remote={<span class="hl2">true</span>}</div>
+        <div>/&gt;</div>
+      </div>
+      <div class="pbadge a"><div class="bl">// status</div><div class="bv g">● open_to_work</div></div>
+      <div class="pbadge b"><div class="bl">// top_skill</div><div class="bv p">{ Laravel, Django }</div></div>
+      <div class="pbadge c"><div class="bl">// base</div><div class="bv o">Calgary, AB · MST</div></div>
+      <figure class="p-frame" id="pFrame">
+        <img src="profile.webp" alt="Ali Assad in an office overlooking downtown Calgary at dusk" width="900" height="900" loading="eager" fetchpriority="high">
+        <span class="scan" aria-hidden="true"></span>
+      </figure>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true"><span>scroll_down</span><div class="sh-line"></div></div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="mq-wrap" aria-hidden="true">
+  <div class="mq-track" data-dir="-1">
+    <div class="mq-item">Laravel<span class="mq-dot">◆</span>Django<span class="mq-dot">◆</span>React<span class="mq-dot">◆</span>Angular<span class="mq-dot">◆</span>Node.js<span class="mq-dot">◆</span>AWS<span class="mq-dot">◆</span>Azure<span class="mq-dot">◆</span>PostgreSQL<span class="mq-dot">◆</span>Redis<span class="mq-dot">◆</span>Docker<span class="mq-dot">◆</span>Python<span class="mq-dot">◆</span>PHP<span class="mq-dot">◆</span>TypeScript<span class="mq-dot">◆</span>MySQL<span class="mq-dot">◆</span>CI/CD<span class="mq-dot">◆</span></div>
+  </div>
+</div>
+<div class="mq-wrap" aria-hidden="true">
+  <div class="mq-track" data-dir="1">
+    <div class="mq-item">open_to_work<span class="mq-dot">◆</span>Calgary_AB<span class="mq-dot">◆</span>remote_worldwide<span class="mq-dot">◆</span>10yr_experience<span class="mq-dot">◆</span>enterprise_scale<span class="mq-dot">◆</span>team_lead<span class="mq-dot">◆</span>cloud_native<span class="mq-dot">◆</span>microservices<span class="mq-dot">◆</span>api_design<span class="mq-dot">◆</span></div>
+  </div>
+</div>
+<div class="strip"></div>
+
+<!-- ================= ABOUT SCENE ================= -->
+<section class="scene" id="about" aria-label="About Ali">
+  <div class="scene-sticky" id="sceneSticky">
+    <div class="scene-top"><b>//</b> about_me</div>
+    <div class="scene-media" id="sceneMedia">
+      <img src="profile.webp" alt="" width="900" height="900" loading="lazy">
+      <div class="scene-shade"></div>
+    </div>
+    <div class="scene-cap l">Calgary, Alberta</div>
+    <div class="scene-cap r">Principal Engineer</div>
+    <div class="scene-text">
+      <p class="stmt" id="stmt">
+        <span class="w" data-c="blue">Ten</span> <span class="w" data-c="blue">years.</span>
+        <span class="w" data-c="purple">Five</span> <span class="w" data-c="purple">teams.</span>
+        <span class="w" data-c="teal">Three</span> <span class="w" data-c="teal">countries.</span>
+        <span class="w">I</span> <span class="w">design</span> <span class="w" data-c="orange">multi-tenant</span> <span class="w" data-c="orange">platforms,</span>
+        <span class="w">lead</span> <span class="w">distributed</span> <span class="w">engineers</span> <span class="w">and</span> <span class="w">ship</span> <span class="w">software</span> <span class="w">that</span> <span class="w" data-c="pink">stays</span> <span class="w" data-c="pink">up.</span>
+      </p>
+    </div>
+    <div class="scene-meta"><span>Lahore</span><span>Dallas</span><span>Calgary</span></div>
+  </div>
+</section>
+
+<!-- ================= NUMBERS ================= -->
+<section class="section" id="numbers" aria-labelledby="numH">
+  <div class="si">
+    <div class="s-ey sr">By the numbers</div>
+    <h2 class="s-ti sr" style="--d:1" id="numH">Results that <em>compound.</em></h2>
+    <div class="num-grid">
+      <div class="num sr" style="--c:var(--blue);--pct:1"><svg class="ring" viewBox="0 0 60 60" aria-hidden="true"><circle class="tr" cx="30" cy="30" r="26"/><circle class="pr" cx="30" cy="30" r="26"/></svg><div class="big"><span data-count="10">0</span><small>+</small></div><h3>Years of experience</h3><p>From CodeIgniter apps in 2016 to multi-tenant cloud platforms today.</p></div>
+      <div class="num sr" style="--c:var(--purple);--pct:.5;--d:1"><svg class="ring" viewBox="0 0 60 60" aria-hidden="true"><circle class="tr" cx="30" cy="30" r="26"/><circle class="pr" cx="30" cy="30" r="26"/></svg><div class="big"><span data-count="50">0</span><small>+</small></div><h3>Dealerships, one platform</h3><p>CRM, inventory, billing and reporting served at once with zero downtime.</p></div>
+      <div class="num sr" style="--c:var(--teal);--pct:.4;--d:2"><svg class="ring" viewBox="0 0 60 60" aria-hidden="true"><circle class="tr" cx="30" cy="30" r="26"/><circle class="pr" cx="30" cy="30" r="26"/></svg><div class="big"><span data-count="40">0</span><small>%</small></div><h3>Faster responses</h3><p>Redis caching, Horizon queues and query tuning at AutoCenter.</p></div>
+      <div class="num sr" style="--c:var(--orange);--pct:.8"><svg class="ring" viewBox="0 0 60 60" aria-hidden="true"><circle class="tr" cx="30" cy="30" r="26"/><circle class="pr" cx="30" cy="30" r="26"/></svg><div class="big"><span data-count="1">0</span><small>M+</small></div><h3>Documents secured</h3><p>Encrypted in Azure Blob with access control and lifecycle policies.</p></div>
+      <div class="num sr" style="--c:var(--pink);--pct:.999;--d:1"><svg class="ring" viewBox="0 0 60 60" aria-hidden="true"><circle class="tr" cx="30" cy="30" r="26"/><circle class="pr" cx="30" cy="30" r="26"/></svg><div class="big"><span data-count="99.9" data-dec="1">0</span><small>%</small></div><h3>Uptime at VFairs</h3><p>Delivered for thousands of concurrent users on a live events platform.</p></div>
+      <div class="num sr" style="--c:var(--yellow);--pct:.66;--d:2"><svg class="ring" viewBox="0 0 60 60" aria-hidden="true"><circle class="tr" cx="30" cy="30" r="26"/><circle class="pr" cx="30" cy="30" r="26"/></svg><div class="big"><span data-count="20">0</span><small>+</small></div><h3>Engineers coordinated</h3><p>Across 3 countries, plus Clean Code workshops for 100+ engineers.</p></div>
     </div>
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section class="block" id="projects" aria-labelledby="projH">
-  <div class="wrap">
-    <h2 class="h2 rv" id="projH">Platforms I've built.</h2>
-    <p class="intro">Open any project for the details and the stack behind it.</p>
-    <div class="proj-grid" id="projGrid"></div>
+<!-- ================= SKILLS ================= -->
+<section class="section" id="skills" aria-labelledby="skillsH">
+  <div class="si">
+    <div class="s-ey sr">Technical Expertise</div>
+    <h2 class="s-ti sr" style="--d:1" id="skillsH">Built for <em>Scale.</em></h2>
+    <p class="s-sub sr" style="--d:2">Pick any technology to light up the roles and projects where I used it. The number shows how often it appears.</p>
+
+    <div class="logos-wrap">
+      <div class="logos-cat sr">backend_&amp;_frameworks</div>
+      <div class="logos-row">
+        <button class="logo-pill sr" aria-pressed="false" data-tech="Laravel"><i class="devicon-laravel-plain colored"></i>Laravel</button>
+        <button class="logo-pill sr" style="--d:1" aria-pressed="false" data-tech="Django"><i class="devicon-django-plain colored"></i>Django</button>
+        <button class="logo-pill sr" style="--d:2" aria-pressed="false" data-tech="PHP"><i class="devicon-php-plain colored"></i>PHP</button>
+        <button class="logo-pill sr" style="--d:3" aria-pressed="false" data-tech="Python"><i class="devicon-python-plain colored"></i>Python</button>
+        <button class="logo-pill sr" style="--d:4" aria-pressed="false" data-tech="Node.js"><i class="devicon-nodejs-plain colored"></i>Node.js</button>
+        <button class="logo-pill sr" style="--d:5" aria-pressed="false" data-tech="CodeIgniter"><i class="devicon-codeigniter-plain colored"></i>CodeIgniter</button>
+        <button class="logo-pill sr" style="--d:6" aria-pressed="false" data-tech="Yii2"><i class="devicon-yii-plain colored"></i>Yii2</button>
+      </div>
+      <div class="logos-cat sr">frontend</div>
+      <div class="logos-row">
+        <button class="logo-pill sr" aria-pressed="false" data-tech="React"><i class="devicon-react-original colored"></i>React</button>
+        <button class="logo-pill sr" style="--d:1" aria-pressed="false" data-tech="Angular"><i class="devicon-angularjs-plain colored"></i>Angular</button>
+        <button class="logo-pill sr" style="--d:2" aria-pressed="false" data-tech="TypeScript"><i class="devicon-typescript-plain colored"></i>TypeScript</button>
+        <button class="logo-pill sr" style="--d:3" aria-pressed="false" data-tech="JavaScript"><i class="devicon-javascript-plain colored"></i>JavaScript</button>
+        <button class="logo-pill sr" style="--d:4" aria-pressed="false" data-tech="HTML5"><i class="devicon-html5-plain colored"></i>HTML5</button>
+        <button class="logo-pill sr" style="--d:5" aria-pressed="false" data-tech="CSS3"><i class="devicon-css3-plain colored"></i>CSS3</button>
+      </div>
+      <div class="logos-cat sr">databases_&amp;_cache</div>
+      <div class="logos-row">
+        <button class="logo-pill sr" aria-pressed="false" data-tech="PostgreSQL"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</button>
+        <button class="logo-pill sr" style="--d:1" aria-pressed="false" data-tech="MySQL"><i class="devicon-mysql-plain colored"></i>MySQL</button>
+        <button class="logo-pill sr" style="--d:2" aria-pressed="false" data-tech="Redis"><i class="devicon-redis-plain colored"></i>Redis</button>
+        <button class="logo-pill sr" style="--d:3" aria-pressed="false" data-tech="MongoDB"><i class="devicon-mongodb-plain colored"></i>MongoDB</button>
+      </div>
+      <div class="logos-cat sr">cloud_&amp;_devops</div>
+      <div class="logos-row">
+        <button class="logo-pill sr" aria-pressed="false" data-tech="AWS"><i class="devicon-amazonwebservices-plain-wordmark colored"></i>AWS</button>
+        <button class="logo-pill sr" style="--d:1" aria-pressed="false" data-tech="Azure"><i class="devicon-azure-plain colored"></i>Azure</button>
+        <button class="logo-pill sr" style="--d:2" aria-pressed="false" data-tech="Docker"><i class="devicon-docker-plain colored"></i>Docker</button>
+        <button class="logo-pill sr" style="--d:3" aria-pressed="false" data-tech="Linux"><i class="devicon-linux-plain colored"></i>Linux</button>
+        <button class="logo-pill sr" style="--d:4" aria-pressed="false" data-tech="Git"><i class="devicon-git-plain colored"></i>Git</button>
+        <button class="logo-pill sr" style="--d:5" aria-pressed="false" data-tech="GitHub"><i class="devicon-github-original colored"></i>GitHub</button>
+        <button class="logo-pill sr" style="--d:6" aria-pressed="false" data-tech="Android"><i class="devicon-android-plain colored"></i>Android</button>
+      </div>
+    </div>
+    <div class="readout" id="readout" aria-live="polite"><span id="readoutText">// select a technology to filter experience and projects</span><button id="clearTech" hidden>clear_filter()</button></div>
+
+    <div class="bento sr">
+      <div class="bc b8">
+        <div class="bc-glow"></div>
+        <div class="bc-ey">Core Stack</div>
+        <div class="bc-ti">Backend Architecture</div>
+        <div class="bc-bo" style="margin-top:6px;max-width:460px">Distributed systems and APIs that handle millions of requests, from monoliths to microservices, built for reliability and growth.</div>
+        <div style="margin-top:22px">
+          <div class="sk-row"><div class="sk-head"><span>Laravel / PHP</span><span class="sk-val">Expert</span></div><div class="sk-bar"><div class="sk-fill" data-w=".96"></div></div></div>
+          <div class="sk-row"><div class="sk-head"><span>Django / Python</span><span class="sk-val">Expert</span></div><div class="sk-bar"><div class="sk-fill" data-w=".93"></div></div></div>
+          <div class="sk-row"><div class="sk-head"><span>Node.js</span><span class="sk-val">Advanced</span></div><div class="sk-bar"><div class="sk-fill" data-w=".85"></div></div></div>
+          <div class="sk-row"><div class="sk-head"><span>React / Angular</span><span class="sk-val">Advanced</span></div><div class="sk-bar"><div class="sk-fill" data-w=".88"></div></div></div>
+        </div>
+      </div>
+      <div class="bc b4" style="background:var(--bg4)">
+        <div class="bc-ey">Performance Win</div>
+        <div class="bc-nu">40<sup>%</sup></div>
+        <div class="bc-bo" style="margin-top:6px">Response time reduction via Redis caching and optimized queues</div>
+        <div class="imp"><div class="imp-l">Impact</div><div class="imp-v">50+ dealerships served simultaneously, zero downtime</div></div>
+      </div>
+      <div class="bc b6">
+        <div class="bc-ey">Leadership</div>
+        <div style="display:flex;gap:32px;align-items:flex-end">
+          <div><div class="bc-nu" style="color:var(--purple)">20<sup>+</sup></div><div class="bc-bo" style="margin-top:4px">Engineers led globally</div></div>
+          <div><div class="bc-nu" style="color:var(--teal)">3</div><div class="bc-bo" style="margin-top:4px">Countries, distributed</div></div>
+        </div>
+        <div class="imp" style="background:rgba(167,139,250,.04);border-color:rgba(167,139,250,.1);margin-top:16px"><div class="imp-l" style="color:var(--purple)">Culture</div><div class="imp-v">Clean Code workshops for 100+ engineers, cutting tech debt</div></div>
+      </div>
+      <div class="bc b6" style="background:var(--bg4)">
+        <div class="bc-ey">Scale Achieved</div>
+        <div style="display:flex;gap:32px;align-items:flex-end">
+          <div><div class="bc-nu" style="color:var(--teal)">1M<sup>+</sup></div><div class="bc-bo" style="margin-top:4px">Files in Azure Blob, encrypted</div></div>
+          <div><div class="bc-nu" style="color:var(--orange)">99.9<sup>%</sup></div><div class="bc-bo" style="margin-top:4px">Uptime at VFairs</div></div>
+        </div>
+      </div>
+      <div class="bc b12">
+        <div class="bc-ey">How a request travels</div>
+        <div class="bc-ti">Architecture I build, live</div>
+        <svg class="arch" viewBox="0 0 960 170" role="img" aria-label="Animated diagram: client to CDN to load balancer to Laravel and Django services, then Redis, queues, SQL databases and cloud storage">
+          <g fill="none">
+            <path id="e1" class="ed" d="M130 85H170"/><path id="e2" class="ed" d="M280 85H320"/>
+            <path id="e3" class="ed" d="M430 85C455 85 455 39 480 39"/><path id="e4" class="ed" d="M430 85C455 85 455 131 480 131"/>
+            <path id="e5" class="ed" d="M590 39H640"/><path id="e6" class="ed" d="M590 39C615 39 615 85 640 85"/>
+            <path id="e7" class="ed" d="M590 131H640"/><path id="e8" class="ed" d="M750 85H810"/><path id="e9" class="ed" d="M750 131C780 131 785 100 810 92"/>
+          </g>
+          <g>
+            <rect class="nd" x="20" y="68" width="110" height="34" rx="8"/><text x="75" y="89" text-anchor="middle">Client</text>
+            <rect class="nd" x="170" y="68" width="110" height="34" rx="8"/><text x="225" y="89" text-anchor="middle">CDN</text>
+            <rect class="nd hot" x="320" y="68" width="110" height="34" rx="8"/><text x="375" y="89" text-anchor="middle">Load balancer</text>
+            <rect class="nd hot" x="480" y="22" width="110" height="34" rx="8"/><text x="535" y="43" text-anchor="middle">Laravel API</text>
+            <rect class="nd hot" x="480" y="114" width="110" height="34" rx="8"/><text x="535" y="135" text-anchor="middle">Django svc</text>
+            <rect class="nd" x="640" y="22" width="110" height="34" rx="8"/><text x="695" y="43" text-anchor="middle">Redis cache</text>
+            <rect class="nd" x="640" y="68" width="110" height="34" rx="8"/><text x="695" y="89" text-anchor="middle">Queue · Horizon</text>
+            <rect class="nd" x="640" y="114" width="110" height="34" rx="8"/><text x="695" y="135" text-anchor="middle">SQL · MySQL/PG</text>
+            <rect class="nd hot" x="810" y="68" width="130" height="34" rx="8"/><text x="875" y="89" text-anchor="middle">Azure Blob · S3</text>
+          </g>
+          <g>
+            <circle class="pk" r="3.5"><animateMotion dur="1.1s" repeatCount="indefinite"><mpath href="#e1"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1.1s" begin=".3s" repeatCount="indefinite"><mpath href="#e2"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1.2s" begin=".6s" repeatCount="indefinite"><mpath href="#e3"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1.2s" begin=".9s" repeatCount="indefinite"><mpath href="#e4"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1s" begin=".2s" repeatCount="indefinite"><mpath href="#e5"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1.2s" begin=".7s" repeatCount="indefinite"><mpath href="#e6"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1s" begin=".4s" repeatCount="indefinite"><mpath href="#e7"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1.1s" begin=".1s" repeatCount="indefinite"><mpath href="#e8"/></animateMotion></circle>
+            <circle class="pk" r="3.5"><animateMotion dur="1.3s" begin=".8s" repeatCount="indefinite"><mpath href="#e9"/></animateMotion></circle>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="section" id="experience" aria-labelledby="expH">
+  <div class="si">
+    <div class="s-ey sr">career</div>
+    <h2 class="s-ti sr" style="--d:1" id="expH">Where I've <em>Built.</em></h2>
+    <p class="s-sub sr" style="--d:2">Five teams across Pakistan, the United States and Canada. Scroll to move through them.</p>
+
+    <div class="exp">
+      <!-- sticky stage: swaps company logo as you scroll -->
+      <aside class="exp-stage" aria-hidden="true">
+        <div class="stage" id="stage">
+          <div class="stage-glow"></div><div class="stage-grid"></div>
+
+          <div class="pane on" data-i="0" data-brand="#c9a24a">
+            <div class="plate ivory"><img src="https://img1.wsimg.com/isteam/ip/c2733ba2-7e70-46d7-bead-3f98e6f54661/Saturn-Logo-a01fc9e.png/:/rs=h:104,cg:true,m/qt=q:95" alt="" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="wm" hidden style="color:#1d283b">Saturn<small>EXPERTS</small></span></div>
+            <div class="pm-top"><span>Jul 2025 → <b>present</b></span><span>Calgary, Canada</span></div>
+            <h3>Saturn Experts</h3><div class="role">Software Engineer</div>
+            <p class="pm-about">A technology consultancy with a simple promise: making technology accessible.</p>
+            <div class="pm-metric"><strong>2025</strong><span>joined to build enterprise software at scale</span></div>
+            <div class="pchips"><span class="tag">Django</span><span class="tag">PHP</span><span class="tag">React</span><span class="tag">PostgreSQL</span><span class="tag">AWS</span></div>
+          </div>
+
+          <div class="pane" data-i="1" data-brand="#fb923c">
+            <div class="plate mono" style="--m1:#7c3aed;--m2:#ec4899"><span class="wm">AutoCenter<small>LLC · DALLAS</small></span></div>
+            <div class="pm-top"><span>May 2022 → Jun 2025</span><span>Dallas, USA · remote</span></div>
+            <h3>AutoCenter LLC</h3><div class="role">Principal Engineer &amp; Team Lead</div>
+            <p class="pm-about">Software for car dealers: a dealer management system, a marketplace and a document vault.</p>
+            <div class="pm-metric"><strong>40%</strong><span>faster response times on the dealer platform</span></div>
+            <div class="pchips"><span class="tag">Laravel</span><span class="tag">Yii2</span><span class="tag">Angular</span><span class="tag">React</span><span class="tag">Azure</span><span class="tag">Redis</span></div>
+          </div>
+
+          <div class="pane" data-i="2" data-brand="#0a76db">
+            <div class="plate dark"><img src="https://arbisoft.com/images/logo.svg" alt="" style="max-width:68%;max-height:46px" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="wm" hidden>arbisoft</span></div>
+            <div class="pm-top"><span>Aug 2019 → Feb 2022</span><span>Lahore, Pakistan</span></div>
+            <h3>Arbisoft</h3><div class="role">Software Engineer</div>
+            <p class="pm-about">A software engineering company building web, mobile, data and AI products since 2007.</p>
+            <div class="pm-metric"><strong>100+</strong><span>engineers trained in Clean Code</span></div>
+            <div class="pchips"><span class="tag">Django</span><span class="tag">React</span><span class="tag">Open edX</span><span class="tag">Python</span><span class="tag">Docker</span></div>
+          </div>
+
+          <div class="pane" data-i="3" data-brand="#f2662e">
+            <div class="plate"><img src="https://www.vfairs.com/wp-content/themes/vfairs/assets/img/vfairs-logo.svg" alt="" style="max-width:58%;max-height:96px" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false"><span class="wm" hidden style="color:#ef4177">vFairs</span></div>
+            <div class="pm-top"><span>May 2017 → Aug 2019</span><span>Lahore, Pakistan</span></div>
+            <h3>Bayt.com / VFairs</h3><div class="role">Software Engineer</div>
+            <p class="pm-about">The event platform behind in-person, hybrid and virtual events, from registration to live sessions.</p>
+            <div class="pm-metric"><strong>99.9%</strong><span>uptime. Top Performer, Q2 2018</span></div>
+            <div class="pchips"><span class="tag">Yii2</span><span class="tag">Angular</span><span class="tag">AWS</span><span class="tag">PHP</span><span class="tag">Laravel</span></div>
+          </div>
+
+          <div class="pane" data-i="4" data-brand="#f472b6">
+            <div class="plate mono" style="--m1:#0ea5e9;--m2:#2563eb"><span class="wm">Swenggco<small>SIALKOT</small></span></div>
+            <div class="pm-top"><span>Oct 2016 → Apr 2017</span><span>Sialkot, Pakistan</span></div>
+            <h3>Swenggco</h3><div class="role">Associate Engineer</div>
+            <p class="pm-about">Where it started: full-stack ERP and native Android work.</p>
+            <div class="pm-metric"><strong>2016</strong><span>first role: ERP, web and native Android</span></div>
+            <div class="pchips"><span class="tag">CodeIgniter</span><span class="tag">AngularJS</span><span class="tag">Android</span><span class="tag">PHP</span></div>
+          </div>
+
+          <div class="stage-dots" id="stageDots">
+            <button class="sd on" data-i="0" tabindex="-1">2025</button><button class="sd" data-i="1" tabindex="-1">2022</button><button class="sd" data-i="2" tabindex="-1">2019</button><button class="sd" data-i="3" tabindex="-1">2017</button><button class="sd" data-i="4" tabindex="-1">2016</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="exp-list" id="expList">
+        <article class="ex on" data-i="0" data-stack="Django,PHP,Python,React,PostgreSQL,AWS">
+          <div class="plate plate-inline ivory"><img src="https://img1.wsimg.com/isteam/ip/c2733ba2-7e70-46d7-bead-3f98e6f54661/Saturn-Logo-a01fc9e.png/:/rs=h:104,cg:true,m/qt=q:95" alt="Saturn Experts logo" loading="lazy" onerror="this.hidden=true"></div>
+          <div class="e-period">Jul 2025 — present · Calgary, AB, Canada</div>
+          <h3 class="e-co">Saturn Experts</h3>
+          <div class="e-role">role: "Software Engineer"</div>
+          <div class="e-loc">location: "Calgary, Alberta, Canada"</div>
+          <div class="e-tags"><span class="e-tag">Django</span><span class="e-tag">PHP</span><span class="e-tag">React</span><span class="e-tag">PostgreSQL</span><span class="e-tag">AWS</span></div>
+          <ul class="e-buls">
+            <li>Building enterprise software solutions focused on <strong>scalability and architectural excellence</strong>.</li>
+            <li>Driving technical innovation through code reviews and industry best practices.</li>
+          </ul>
+        </article>
+
+        <article class="ex" data-i="1" data-stack="Laravel,PHP,Yii2,Angular,React,Node.js,MySQL,Azure,Redis">
+          <div class="plate plate-inline mono" style="--m1:#7c3aed;--m2:#ec4899"><span class="wm">AutoCenter</span></div>
+          <div class="e-period">May 2022 — Jun 2025 · Dallas, USA (Remote)</div>
+          <h3 class="e-co">AutoCenter LLC</h3>
+          <div class="e-role">role: "Principal Engineer &amp; Team Lead"</div>
+          <div class="e-loc">location: "Dallas, USA · Remote"</div>
+          <div class="e-tags"><span class="e-tag">Laravel</span><span class="e-tag">Yii2</span><span class="e-tag">Angular</span><span class="e-tag">React</span><span class="e-tag">Node.js</span><span class="e-tag">MySQL</span><span class="e-tag">Azure</span><span class="e-tag">Redis</span></div>
+          <ul class="e-buls">
+            <li>Architected a <strong>multi-tenant Dealer Management System</strong> serving 50+ dealerships: CRM, inventory, billing, reporting.</li>
+            <li>Cut response times by <strong>40%</strong> via Laravel Horizon, Redis caching and queue optimisation.</li>
+            <li>Integrated Azure Blob Storage for secure document management across <strong>1M+ files</strong>.</li>
+            <li>Automated marketing pipelines via Mailchimp and Twilio, boosting engagement by <strong>25%</strong>.</li>
+            <li>Led and mentored an <strong>8-engineer</strong> globally distributed team: coding standards, peer reviews, CI/CD.</li>
+            <li>Delivered Angular Marketplace, React Dealer Admin Panel and Yii2 CMS with RouteOne credit integration.</li>
+          </ul>
+        </article>
+
+        <article class="ex" data-i="2" data-stack="Django,Python,React,Docker">
+          <div class="plate plate-inline dark"><img src="https://arbisoft.com/images/logo.svg" alt="Arbisoft logo" style="max-height:34px" loading="lazy" onerror="this.hidden=true"></div>
+          <div class="e-period">Aug 2019 — Feb 2022 · Lahore, Pakistan</div>
+          <h3 class="e-co">Arbisoft</h3>
+          <div class="e-role">role: "Software Engineer"</div>
+          <div class="e-loc">location: "Lahore, Pakistan"</div>
+          <div class="e-tags"><span class="e-tag">Django</span><span class="e-tag">React</span><span class="e-tag">Open edX</span><span class="e-tag">Python</span><span class="e-tag">Docker</span></div>
+          <ul class="e-buls">
+            <li>Built interactive XBlocks on Open edX, boosting learning engagement by <strong>20%</strong>.</li>
+            <li>Coordinated <strong>20+ engineers</strong> on architecture consistency and CI/CD reliability.</li>
+            <li>Ran company-wide Clean Code workshops for <strong>100+ engineers</strong>, cutting technical debt.</li>
+            <li>Containerised apps with Docker, cutting setup time by <strong>50%</strong>.</li>
+          </ul>
+        </article>
+
+        <article class="ex" data-i="3" data-stack="Yii2,Angular,AWS,PHP,Laravel">
+          <div class="plate plate-inline"><img src="https://www.vfairs.com/wp-content/themes/vfairs/assets/img/vfairs-logo.svg" alt="vFairs logo" loading="lazy" onerror="this.hidden=true"></div>
+          <div class="e-period">May 2017 — Aug 2019 · Lahore, Pakistan</div>
+          <h3 class="e-co">Bayt.com / VFairs</h3>
+          <div class="e-role">role: "Software Engineer"</div>
+          <div class="e-loc">location: "Lahore, Pakistan"</div>
+          <div class="e-tags"><span class="e-tag">Yii2</span><span class="e-tag">Angular</span><span class="e-tag">AWS</span><span class="e-tag">PHP</span><span class="e-tag">Laravel</span></div>
+          <ul class="e-buls">
+            <li>Built core modules for a <strong>virtual events platform</strong> handling thousands of concurrent users.</li>
+            <li>Created a no-code Angular website builder: zero dev skills needed by clients.</li>
+            <li>Re-engineered SaaS admin panels, improving onboarding and automation.</li>
+            <li>Delivered <strong>99.9% uptime</strong> and was awarded Top Performer of the Quarter, Q2 2018.</li>
+          </ul>
+        </article>
+
+        <article class="ex" data-i="4" data-stack="PHP,CodeIgniter,Angular,Android,MySQL">
+          <div class="plate plate-inline mono" style="--m1:#0ea5e9;--m2:#2563eb"><span class="wm">Swenggco</span></div>
+          <div class="e-period">Oct 2016 — Apr 2017 · Sialkot, Pakistan</div>
+          <h3 class="e-co">Swenggco</h3>
+          <div class="e-role">role: "Associate Engineer"</div>
+          <div class="e-loc">location: "Sialkot, Pakistan"</div>
+          <div class="e-tags"><span class="e-tag">PHP / CodeIgniter</span><span class="e-tag">AngularJS</span><span class="e-tag">Android</span></div>
+          <ul class="e-buls">
+            <li>Built full-stack CodeIgniter + AngularJS apps for internal and client systems.</li>
+            <li>Developed native Android apps for mobile-first solutions.</li>
+            <li>Built <strong>Schroll ERP</strong>, automating workflows, reports and operations end-to-end.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section" id="projects" aria-labelledby="projH">
+  <div class="si">
+    <div class="s-ey sr">notable_work</div>
+    <h2 class="s-ti sr" style="--d:1" id="projH">Projects &amp; <em>Platforms.</em></h2>
+    <p class="s-sub sr" style="--d:2">Open any card for the full story and the stack behind it.</p>
+
+    <div class="pg" id="pg">
+      <!-- 1 DMS -->
+      <button class="pc sr" data-stack="Laravel,PHP,Yii2,React,Angular,MySQL,Azure,Redis" data-title="Auto Dealer Management System" data-where="AutoCenter LLC · 2022–2025" aria-haspopup="dialog">
+        <div class="art"><svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect x="12" y="12" width="296" height="156" rx="10" fill="#0c0c1b" stroke="#ffffff14"/><rect x="12" y="12" width="46" height="156" rx="10" fill="#0f0f22"/>
+          <g fill="#ffffff1c"><rect x="22" y="26" width="26" height="6" rx="3"/><rect x="22" y="42" width="20" height="4" rx="2"/><rect x="22" y="54" width="24" height="4" rx="2"/><rect x="22" y="66" width="18" height="4" rx="2"/></g><circle cx="35" cy="150" r="7" fill="#4d9fff55"/>
+          <rect x="68" y="24" width="68" height="34" rx="7" fill="#141430"/><rect x="76" y="32" width="26" height="4" rx="2" fill="#ffffff22"/><rect x="76" y="42" width="40" height="8" rx="3" fill="#4d9fff"/>
+          <rect x="144" y="24" width="68" height="34" rx="7" fill="#141430"/><rect x="152" y="32" width="30" height="4" rx="2" fill="#ffffff22"/><rect x="152" y="42" width="34" height="8" rx="3" fill="#a78bfa"/>
+          <rect x="220" y="24" width="80" height="34" rx="7" fill="#141430"/><rect x="228" y="32" width="28" height="4" rx="2" fill="#ffffff22"/><rect x="228" y="42" width="44" height="8" rx="3" fill="#34d399"/>
+          <rect x="68" y="66" width="232" height="88" rx="8" fill="#101026"/>
+          <g fill="#4d9fff66"><rect class="bar" style="--d:0s" x="80" y="116" width="11" height="30" rx="2"/><rect class="bar" style="--d:.1s" x="99" y="104" width="11" height="42" rx="2"/><rect class="bar" style="--d:.2s" x="118" y="112" width="11" height="34" rx="2"/><rect class="bar" style="--d:.3s" x="137" y="96" width="11" height="50" rx="2"/><rect class="bar" style="--d:.4s" x="156" y="102" width="11" height="44" rx="2"/><rect class="bar" style="--d:.5s" x="175" y="88" width="11" height="58" rx="2"/><rect class="bar" style="--d:.6s" x="194" y="94" width="11" height="52" rx="2"/><rect class="bar" style="--d:.7s" x="213" y="80" width="11" height="66" rx="2"/></g>
+          <path class="draw" d="M84 126C110 108 126 120 150 98S200 90 226 80S270 74 292 72" fill="none" stroke="#34d399" stroke-width="2.4" stroke-linecap="round"/>
+          <circle cx="292" cy="72" r="4" fill="#34d399"/><circle class="pulse" cx="292" cy="72" r="4" fill="#34d399"/>
+        </svg></div>
+        <div class="pb"><div class="pk">multi-tenant · saas</div><div class="p-name">Auto Dealer Management System</div><div class="p-desc">Multi-tenant DMS serving 50+ dealerships: CRM, inventory, billing, reporting and RouteOne credit integration.</div>
+          <div class="tags"><span class="tag">Laravel</span><span class="tag">Yii2</span><span class="tag">React</span><span class="tag">Angular</span><span class="tag">MySQL</span><span class="tag">Azure</span><span class="tag">Redis</span></div>
+          <div class="p-open">open_details <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5"/></svg></div></div>
+        <template class="more"><p>A multi-tenant Dealer Management System serving 50+ dealerships, covering CRM, inventory, billing, reporting and RouteOne credit integration. Built to scale across hundreds of concurrent users, with Redis caching and Horizon queues cutting response times by 40%.</p></template>
+      </button>
+
+      <!-- 2 Marketplace -->
+      <button class="pc sr" style="--d:1" data-stack="Angular,Node.js,Redis,AWS" data-title="Automotive Marketplace" data-where="AutoCenter LLC · 2022–2025" aria-haspopup="dialog">
+        <div class="art"><svg viewBox="0 0 320 180" aria-hidden="true">
+          <defs><clipPath id="mk-c"><rect x="16" y="14" width="88" height="70" rx="8"/><rect x="116" y="14" width="88" height="70" rx="8"/><rect x="216" y="14" width="88" height="70" rx="8"/><rect x="16" y="96" width="88" height="70" rx="8"/><rect x="116" y="96" width="88" height="70" rx="8"/><rect x="216" y="96" width="88" height="70" rx="8"/></clipPath>
+          <linearGradient id="mk-g"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".16"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+          <g fill="#101026" stroke="#ffffff12"><rect x="16" y="14" width="88" height="70" rx="8"/><rect x="116" y="14" width="88" height="70" rx="8"/><rect x="216" y="14" width="88" height="70" rx="8"/><rect x="16" y="96" width="88" height="70" rx="8"/><rect x="116" y="96" width="88" height="70" rx="8"/><rect x="216" y="96" width="88" height="70" rx="8"/></g>
+          <g><rect x="22" y="20" width="76" height="34" rx="5" fill="#4d9fff33"/><rect x="122" y="20" width="76" height="34" rx="5" fill="#a78bfa33"/><rect x="222" y="20" width="76" height="34" rx="5" fill="#34d39933"/><rect x="22" y="102" width="76" height="34" rx="5" fill="#fb923c33"/><rect x="122" y="102" width="76" height="34" rx="5" fill="#f472b633"/><rect x="222" y="102" width="76" height="34" rx="5" fill="#4d9fff33"/></g>
+          <g fill="#ffffff22"><rect x="24" y="62" width="50" height="5" rx="2.5"/><rect x="24" y="72" width="30" height="4" rx="2"/><rect x="124" y="62" width="48" height="5" rx="2.5"/><rect x="124" y="72" width="32" height="4" rx="2"/><rect x="224" y="62" width="52" height="5" rx="2.5"/><rect x="224" y="72" width="28" height="4" rx="2"/><rect x="24" y="144" width="48" height="5" rx="2.5"/><rect x="24" y="154" width="30" height="4" rx="2"/><rect x="124" y="144" width="52" height="5" rx="2.5"/><rect x="124" y="154" width="26" height="4" rx="2"/><rect x="224" y="144" width="46" height="5" rx="2.5"/><rect x="224" y="154" width="34" height="4" rx="2"/></g>
+          <g clip-path="url(#mk-c)"><rect class="shim" x="0" y="0" width="70" height="180" fill="url(#mk-g)" transform="skewX(-14)"/></g>
+          <circle cx="190" cy="28" r="5" fill="#f472b6"/><circle class="pulse" cx="190" cy="28" r="5" fill="#f472b6"/>
+          <g class="pop" style="--d:.8s"><rect x="150" y="114" width="46" height="18" rx="9" fill="#34d399"/><text x="173" y="127" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="9" font-weight="700" fill="#021">$24k</text></g>
+        </svg></div>
+        <div class="pb"><div class="pk">angular · marketplace</div><div class="p-name">Automotive Marketplace</div><div class="p-desc">Angular marketplace connecting dealers and buyers. Redis-backed caching, Horizon queues and automated Mailchimp/Twilio pipelines.</div>
+          <div class="tags"><span class="tag">Angular</span><span class="tag">Node.js</span><span class="tag">Redis</span><span class="tag">Twilio</span><span class="tag">Mailchimp</span><span class="tag">AWS</span></div>
+          <div class="p-open">open_details <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5"/></svg></div></div>
+        <template class="more"><p>An Angular marketplace connecting dealers and buyers. Redis-backed caching, Horizon queues and automated Mailchimp and Twilio pipelines lifted engagement by 25% while holding 99.9% uptime.</p></template>
+      </button>
+
+      <!-- 3 edX -->
+      <button class="pc sr" style="--d:2" data-stack="Django,Python,React,Docker" data-title="Open edX Learning Platform" data-where="Arbisoft · 2019–2022" aria-haspopup="dialog">
+        <div class="art"><svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect x="14" y="14" width="292" height="152" rx="10" fill="#0c0c1b" stroke="#ffffff14"/>
+          <rect x="30" y="26" width="110" height="9" rx="4.5" fill="#ffffff22"/><circle cx="278" cy="31" r="5" fill="#34d39966"/><circle cx="262" cy="31" r="5" fill="#fbbf2466"/>
+          <rect class="blk" style="--fx:-70px;--fy:-50px;--fr:-18deg;--d:0s" x="30" y="52" width="56" height="58" rx="9" fill="#4d9fff"/>
+          <rect class="blk" style="--fx:50px;--fy:-70px;--fr:14deg;--d:.18s" x="98" y="52" width="56" height="58" rx="9" fill="#a78bfa"/>
+          <rect class="blk" style="--fx:-40px;--fy:70px;--fr:12deg;--d:.36s" x="166" y="52" width="56" height="58" rx="9" fill="#34d399"/>
+          <rect class="blk" style="--fx:80px;--fy:60px;--fr:-14deg;--d:.54s" x="234" y="52" width="56" height="58" rx="9" fill="#fb923c"/>
+          <g fill="#00000055"><circle cx="58" cy="81" r="7"/><circle cx="126" cy="81" r="7"/><circle cx="194" cy="81" r="7"/><circle cx="262" cy="81" r="7"/></g>
+          <rect x="30" y="128" width="260" height="9" rx="4.5" fill="#ffffff14"/><rect class="fillx" x="30" y="128" width="260" height="9" rx="4.5" fill="url(#ed-g)"/>
+          <defs><linearGradient id="ed-g"><stop offset="0" stop-color="#4d9fff"/><stop offset="1" stop-color="#34d399"/></linearGradient></defs>
+          <g class="pop" style="--d:1.8s"><circle cx="278" cy="132" r="12" fill="#34d399"/><path d="M272 132l4 4 8-8" fill="none" stroke="#021" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
+        </svg></div>
+        <div class="pb"><div class="pk">django · open edx</div><div class="p-name">Open edX Learning Platform</div><div class="p-desc">Custom Open edX with interactive XBlocks that lifted learner engagement by 20%.</div>
+          <div class="tags"><span class="tag">Django</span><span class="tag">Python</span><span class="tag">React</span><span class="tag">Open edX</span><span class="tag">Docker</span></div>
+          <div class="p-open">open_details <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5"/></svg></div></div>
+        <template class="more"><p>A customised Open edX platform with interactive XBlocks that raised learner engagement by 20%. I coordinated 20+ engineers on architecture, CI/CD and clean code standards, and containerised the stack with Docker to cut setup time by 50%.</p></template>
+      </button>
+
+      <!-- 4 VFairs -->
+      <button class="pc sr" data-stack="Yii2,Angular,PHP,AWS,Laravel" data-title="VFairs Virtual Events" data-where="Bayt.com / VFairs · 2017–2019" aria-haspopup="dialog">
+        <div class="art"><svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect x="14" y="14" width="292" height="152" rx="10" fill="#0c0c1b" stroke="#ffffff14"/>
+          <rect x="26" y="24" width="50" height="18" rx="9" fill="#ef444422" stroke="#ef444466"/><circle class="live" cx="38" cy="33" r="3.5" fill="#ef4444"/><text x="46" y="36.5" font-family="JetBrains Mono,monospace" font-size="8.5" font-weight="700" fill="#fca5a5">LIVE</text>
+          <text x="294" y="36" text-anchor="end" font-family="JetBrains Mono,monospace" font-size="9" fill="#8888aa">12,408 online</text>
+          <g><polygon points="36,70 106,70 112,58 30,58" fill="#f2662e"/><rect x="36" y="70" width="70" height="40" fill="#141430"/><rect x="48" y="82" width="46" height="5" rx="2.5" fill="#ffffff2a"/><rect x="48" y="92" width="30" height="4" rx="2" fill="#ffffff18"/></g>
+          <g><polygon points="126,70 196,70 202,58 120,58" fill="#ef4177"/><rect x="126" y="70" width="70" height="40" fill="#141430"/><rect x="138" y="82" width="46" height="5" rx="2.5" fill="#ffffff2a"/><rect x="138" y="92" width="34" height="4" rx="2" fill="#ffffff18"/></g>
+          <g><polygon points="216,70 286,70 292,58 210,58" fill="#4d9fff"/><rect x="216" y="70" width="70" height="40" fill="#141430"/><rect x="228" y="82" width="46" height="5" rx="2.5" fill="#ffffff2a"/><rect x="228" y="92" width="26" height="4" rx="2" fill="#ffffff18"/></g>
+          <g>
+            <circle r="4" fill="#34d399"><animateMotion dur="8s" repeatCount="indefinite" path="M30 140C90 120 150 152 290 134S60 150 30 140"/></circle>
+            <circle r="4" fill="#fbbf24"><animateMotion dur="10s" repeatCount="indefinite" path="M290 144C220 124 150 150 40 130S250 150 290 144"/></circle>
+            <circle r="4" fill="#a78bfa"><animateMotion dur="7s" repeatCount="indefinite" path="M70 126C100 146 150 120 210 142S120 128 70 126"/></circle>
+            <circle r="3.5" fill="#f472b6"><animateMotion dur="9s" repeatCount="indefinite" path="M250 128C200 150 120 124 80 144S230 126 250 128"/></circle>
+            <circle r="3.5" fill="#4d9fff"><animateMotion dur="11s" repeatCount="indefinite" path="M150 122C190 148 260 128 280 148S110 130 150 122"/></circle>
+            <circle r="3.5" fill="#fb923c"><animateMotion dur="6.5s" repeatCount="indefinite" path="M60 148C120 128 190 146 240 124S90 146 60 148"/></circle>
+          </g>
+        </svg></div>
+        <div class="pb"><div class="pk">virtual events · scale</div><div class="p-name">VFairs Virtual Events</div><div class="p-desc">Large-scale virtual events platform for thousands of concurrent users, with a no-code Angular site builder.</div>
+          <div class="tags"><span class="tag">Yii2</span><span class="tag">Angular</span><span class="tag">PHP</span><span class="tag">AWS S3</span><span class="tag">Laravel</span></div>
+          <div class="p-open">open_details <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5"/></svg></div></div>
+        <template class="more"><p>A large-scale virtual events platform for thousands of concurrent users, plus a no-code Angular website builder so clients could manage event pages themselves. Delivered 99.9% uptime and earned Top Performer of the Quarter in Q2 2018.</p></template>
+      </button>
+
+      <!-- 5 ERP -->
+      <button class="pc sr" style="--d:1" data-stack="CodeIgniter,Angular,Android,MySQL,PHP" data-title="Schroll ERP" data-where="Swenggco · 2016–2017" aria-haspopup="dialog">
+        <div class="art"><svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect x="14" y="14" width="292" height="152" rx="10" fill="#0c0c1b" stroke="#ffffff14"/>
+          <g class="gear"><circle cx="96" cy="100" r="30" fill="none" stroke="#4d9fff" stroke-width="10" stroke-dasharray="7.85 7.85"/><circle cx="96" cy="100" r="25" fill="#0c0c1b" stroke="#4d9fff" stroke-width="2"/><circle cx="96" cy="100" r="9" fill="#4d9fff55"/></g>
+          <g class="gear rev"><circle cx="147" cy="74" r="22" fill="none" stroke="#a78bfa" stroke-width="9" stroke-dasharray="6.91 6.91"/><circle cx="147" cy="74" r="18" fill="#0c0c1b" stroke="#a78bfa" stroke-width="2"/><circle cx="147" cy="74" r="6" fill="#a78bfa55"/></g>
+          <path class="ed flow" d="M196 46H222" fill="none" stroke="#ffffff30" stroke-width="1.6"/>
+          <rect x="222" y="34" width="72" height="24" rx="7" fill="#141430" stroke="#34d39955"/><rect x="230" y="43" width="30" height="5" rx="2.5" fill="#ffffff2a"/><circle cx="282" cy="46" r="4" fill="#34d399"/>
+          <path class="flow" d="M258 58V82" fill="none" stroke="#ffffff30" stroke-width="1.6"/>
+          <rect x="222" y="82" width="72" height="24" rx="7" fill="#141430" stroke="#fbbf2455"/><rect x="230" y="91" width="34" height="5" rx="2.5" fill="#ffffff2a"/><circle cx="282" cy="94" r="4" fill="#fbbf24"/>
+          <path class="flow" d="M258 106V130" fill="none" stroke="#ffffff30" stroke-width="1.6"/>
+          <rect x="222" y="130" width="72" height="24" rx="7" fill="#141430" stroke="#4d9fff55"/><rect x="230" y="139" width="26" height="5" rx="2.5" fill="#ffffff2a"/><circle cx="282" cy="142" r="4" fill="#4d9fff"/>
+          <g class="float"><rect x="26" y="28" width="38" height="22" rx="5" fill="#141430" stroke="#fb923c66"/><rect x="32" y="35" width="20" height="4" rx="2" fill="#fb923c88"/><rect x="32" y="42" width="12" height="3" rx="1.5" fill="#ffffff22"/></g>
+        </svg></div>
+        <div class="pb"><div class="pk">erp · automation</div><div class="p-name">Schroll ERP</div><div class="p-desc">Internal ERP automating workflows, reporting and operations, with an Android companion app.</div>
+          <div class="tags"><span class="tag">CodeIgniter</span><span class="tag">AngularJS</span><span class="tag">Android</span><span class="tag">MySQL</span></div>
+          <div class="p-open">open_details <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5"/></svg></div></div>
+        <template class="more"><p>An internal ERP automating business workflows, reporting and operations end to end. Migrated legacy PHP to a more scalable architecture and shipped an Android companion app for mobile-first teams.</p></template>
+      </button>
+
+      <!-- 6 Vault -->
+      <button class="pc sr" style="--d:2" data-stack="Azure,Laravel,PHP,MySQL,Docker" data-title="Azure Document Vault" data-where="AutoCenter LLC · 2022–2025" aria-haspopup="dialog">
+        <div class="art"><svg viewBox="0 0 320 180" aria-hidden="true">
+          <rect x="14" y="14" width="292" height="152" rx="10" fill="#0c0c1b" stroke="#ffffff14"/>
+          <g fill="#0078d4">
+            <rect class="cell" style="--d:0s" x="28" y="42" width="18" height="18" rx="3"/><rect class="cell" style="--d:.5s" x="51" y="42" width="18" height="18" rx="3"/><rect class="cell" style="--d:1.2s" x="74" y="42" width="18" height="18" rx="3"/><rect class="cell" style="--d:.9s" x="97" y="42" width="18" height="18" rx="3"/>
+            <rect class="cell" style="--d:1.6s" x="28" y="65" width="18" height="18" rx="3"/><rect class="cell" style="--d:.2s" x="51" y="65" width="18" height="18" rx="3"/><rect class="cell" style="--d:2.4s" x="74" y="65" width="18" height="18" rx="3"/><rect class="cell" style="--d:1.1s" x="97" y="65" width="18" height="18" rx="3"/>
+            <rect class="cell" style="--d:.7s" x="28" y="88" width="18" height="18" rx="3"/><rect class="cell" style="--d:2s" x="51" y="88" width="18" height="18" rx="3"/><rect class="cell" style="--d:.3s" x="74" y="88" width="18" height="18" rx="3"/><rect class="cell" style="--d:1.8s" x="97" y="88" width="18" height="18" rx="3"/>
+            <rect class="cell" style="--d:2.8s" x="28" y="111" width="18" height="18" rx="3"/><rect class="cell" style="--d:1.4s" x="51" y="111" width="18" height="18" rx="3"/><rect class="cell" style="--d:.1s" x="74" y="111" width="18" height="18" rx="3"/><rect class="cell" style="--d:2.2s" x="97" y="111" width="18" height="18" rx="3"/>
+          </g>
+          <text x="28" y="152" font-family="JetBrains Mono,monospace" font-size="8" fill="#5b9fe0">azure blob · 1M+ files</text>
+          <path class="ed flow" d="M122 86H170" fill="none" stroke="#4d9fff66" stroke-width="1.6"/>
+          <circle cx="232" cy="90" r="54" fill="#0e0e22" stroke="#ffffff22" stroke-width="2"/><circle cx="232" cy="90" r="42" fill="none" stroke="#4d9fff66" stroke-width="2"/>
+          <g class="spin"><circle cx="232" cy="90" r="16" fill="#141430" stroke="#4d9fff" stroke-width="2"/><path d="M232 74v32M216 90h32M220.7 78.7l22.6 22.6M243.3 78.7l-22.6 22.6" stroke="#4d9fff" stroke-width="2" stroke-linecap="round"/></g>
+          <g fill="#ffffff33"><circle cx="232" cy="44" r="3"/><circle cx="232" cy="136" r="3"/><circle cx="186" cy="90" r="3"/><circle cx="278" cy="90" r="3"/></g>
+          <g>
+            <rect width="12" height="15" rx="2" fill="#fbbf24"><animateMotion dur="3s" repeatCount="indefinite" path="M60 28C120 20 170 50 214 86"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3s" repeatCount="indefinite"/></rect>
+            <rect width="12" height="15" rx="2" fill="#34d399"><animateMotion dur="3s" begin="1s" repeatCount="indefinite" path="M60 28C120 20 170 50 214 86"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3s" begin="1s" repeatCount="indefinite"/></rect>
+            <rect width="12" height="15" rx="2" fill="#f472b6"><animateMotion dur="3s" begin="2s" repeatCount="indefinite" path="M60 28C120 20 170 50 214 86"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.15;.85;1" dur="3s" begin="2s" repeatCount="indefinite"/></rect>
+          </g>
+        </svg></div>
+        <div class="pb"><div class="pk">azure · compliance</div><div class="p-name">Azure Document Vault</div><div class="p-desc">Secure document management on Azure Blob for 1M+ dealership files, built for compliance.</div>
+          <div class="tags"><span class="tag">Azure Blob</span><span class="tag">Laravel</span><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">Docker</span></div>
+          <div class="p-open">open_details <svg viewBox="0 0 16 16"><path d="M5 11l6-6M6 5h5v5"/></svg></div></div>
+        <template class="more"><p>Secure document management on Azure Blob Storage for more than a million dealership files, with encryption, access control and automated lifecycle policies built for compliance.</p></template>
+      </button>
+    </div>
   </div>
 </section>
 
 <dialog id="projDlg" aria-labelledby="dlgTitle">
+  <div class="dlg-art art" id="dlgArt"></div>
   <div class="dlg-in">
     <div class="dlg-top">
       <div><h3 id="dlgTitle"></h3><div class="where" id="dlgWhere"></div></div>
       <button class="close" id="dlgClose" aria-label="Close project details"><svg width="16" height="16" viewBox="0 0 16 16" stroke="currentColor" stroke-width="2"><path d="M3 3l10 10M13 3L3 13"/></svg></button>
     </div>
-    <p id="dlgBody"></p>
-    <h4>Built with</h4>
-    <div class="tags" id="dlgTags" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:10px"></div>
+    <div id="dlgBody"></div>
+    <h4>built_with</h4>
+    <div class="tags" id="dlgTags"></div>
   </div>
 </dialog>
 
-<!-- TERMINAL -->
-<section class="block term-sec" id="terminal" aria-labelledby="termH">
-  <div class="wrap">
+<!-- ================= AWARDS ================= -->
+<section class="section" id="awards" aria-labelledby="awH">
+  <div class="si">
+    <div class="s-ey sr">recognition</div>
+    <h2 class="s-ti sr" style="--d:1" id="awH">Awards &amp; <em>Wins.</em></h2>
+    <div class="ag">
+      <div class="ac sr"><div class="a-icon">🏆</div><div><div class="a-ti">NASCON'16 Web Programming</div><div class="a-org">FAST-NUCES National Computing Conference</div><div class="a-yr">2016 · WINNER</div></div></div>
+      <div class="ac sr" style="--d:1"><div class="a-icon">⚡</div><div><div class="a-ti">NASCON'15 Speed Programming</div><div class="a-org">FAST-NUCES National Computing Conference</div><div class="a-yr">2015 · WINNER</div></div></div>
+      <div class="ac sr"><div class="a-icon">🥇</div><div><div class="a-ti">Softech'15 Speed Programming</div><div class="a-org">Bilal Hashmi Championship · Softech</div><div class="a-yr">2015 · WINNER</div></div></div>
+      <div class="ac sr" style="--d:1"><div class="a-icon">⭐</div><div><div class="a-ti">Top Performer of the Quarter</div><div class="a-org">Bayt.com / VFairs</div><div class="a-yr">Q2 2018 · EMPLOYEE RECOGNITION</div></div></div>
+    </div>
+    <div class="s-ey sr" style="margin-top:56px">education_&amp;_certs</div>
+    <div class="edu-g sr">
+      <div class="edu-i"><div class="edu-ico">🎓</div><div><div class="edu-n">BSc Computer Science</div><div class="edu-s">GIFT University, Gujranwala · 2012 – 2016</div></div></div>
+      <div class="edu-i"><div class="edu-ico">📜</div><div><div class="edu-n">edX Honor Code Certificate: Programming with C#</div><div class="edu-s">edX · Microsoft</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TERMINAL ================= -->
+<section class="section" id="terminal" aria-labelledby="termH">
+  <div class="si term-sec">
     <div>
-      <h2 class="h2 rv" id="termH">Prefer a shell?</h2>
-      <p class="intro">Ask the terminal about my experience, stack or projects. Type <span class="mono">help</span> to see every command, or tap one below.</p>
+      <div class="s-ey sr">interactive</div>
+      <h2 class="s-ti sr" style="--d:1" id="termH">Prefer a <em>shell?</em></h2>
+      <p class="s-sub sr" style="--d:2">Ask the terminal about my experience, stack or projects. Type <b style="font-family:var(--mono);color:var(--yellow);font-weight:500">help</b> to see every command, or tap one below.</p>
       <div class="sugg" id="sugg"></div>
     </div>
-    <div class="term" id="termBox">
-      <div class="term-bar"><i></i><i></i><i></i><span>ali@calgary: ~</span></div>
+    <div class="term sr" id="termBox">
+      <div class="term-bar2"><div class="tds"><div class="td" style="background:#ff5f57"></div><div class="td" style="background:#febc2e"></div><div class="td" style="background:#28c840"></div></div><span>ali@calgary: ~</span></div>
       <div class="term-out" id="termOut" role="log" aria-live="polite"></div>
-      <form class="term-in" id="termForm" autocomplete="off">
-        <label for="termIn">ali@calgary ~ $</label>
-        <input id="termIn" spellcheck="false" autocapitalize="off" aria-label="Terminal command">
-      </form>
+      <form class="term-in" id="termForm" autocomplete="off"><label for="termIn">ali@calgary ~ $</label><input id="termIn" spellcheck="false" autocapitalize="off" aria-label="Terminal command"></form>
     </div>
   </div>
 </section>
 
-<!-- RECOGNITION -->
-<section class="block" id="awards" aria-labelledby="recH">
-  <div class="wrap">
-    <h2 class="h2 rv" id="recH">Wins and schooling.</h2>
-    <div class="rec">
-      <div>
-        <h3>Awards</h3>
-        <ol>
-          <li><span class="y">2018</span><div><strong>Top Performer of the Quarter</strong><span class="o">Bayt.com / VFairs, Q2 2018</span></div></li>
-          <li><span class="y">2016</span><div><strong>NASCON'16 Web Programming, winner</strong><span class="o">FAST-NUCES National Computing Conference</span></div></li>
-          <li><span class="y">2015</span><div><strong>NASCON'15 Speed Programming, winner</strong><span class="o">FAST-NUCES National Computing Conference</span></div></li>
-          <li><span class="y">2015</span><div><strong>Softech'15 Speed Programming, winner</strong><span class="o">Bilal Hashmi Championship</span></div></li>
-        </ol>
-      </div>
-      <div>
-        <h3>Education and certificates</h3>
-        <ol>
-          <li><span class="y">2016</span><div><strong>BSc Computer Science</strong><span class="o">GIFT University, Gujranwala, 2012 to 2016</span></div></li>
-          <li><span class="y">edX</span><div><strong>Programming with C#</strong><span class="o">Honor Code Certificate, edX and Microsoft</span></div></li>
-        </ol>
-      </div>
+<!-- ================= CONTACT ================= -->
+<section id="contact" aria-labelledby="ctH">
+  <div class="orb" aria-hidden="true"></div>
+  <div class="si">
+    <h2 class="ct-ti sr" id="ctH"><span class="mono">// ready_to_collaborate?</span>Let's build<br><span class="grad">together.</span></h2>
+    <p class="ct-sub sr" style="--d:1">Scaling a team, need cloud architecture expertise, or have a product that deserves exceptional engineering? I'm one message away.</p>
+    <div class="ct-btns sr" style="--d:2">
+      <a href="mailto:ali.n.assad@gmail.com" class="btn-p mag">send_message()</a>
+      <a href="tel:+14036138920" class="btn-g mag">schedule_call()</a>
+      <a href="Ali%20Assad%20CV.pdf" class="btn-g mag" target="_blank" rel="noopener">download_cv()</a>
     </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="block contact" id="contact" aria-labelledby="contactH">
-  <div class="wrap">
-    <h2 class="big rv" id="contactH">Let's build<br><a href="mailto:ali.n.assad@gmail.com">together.</a></h2>
-    <p class="intro">Scaling a team, planning a cloud architecture or shipping a product that has to hold up under load? Send me a message.</p>
-    <div class="contact-row">
-      <button class="c-item" id="copyEmail" type="button"><small>Email (click to copy)</small><span>ali.n.assad@gmail.com</span></button>
-      <a class="c-item" href="tel:+14036138920"><small>Phone</small><span>+1 (403) 613-8920</span></a>
-      <a class="c-item" href="https://linkedin.com/in/ali-assad-336019133" target="_blank" rel="noopener"><small>LinkedIn</small><span>ali-assad-336019133</span></a>
-      <a class="c-item" href="https://aliassad.github.io/portfolio/Ali%20Assad%20CV.pdf" target="_blank" rel="noopener"><small>Résumé</small><span>Download CV (PDF)</span></a>
+    <div class="ct-cards sr" style="--d:3">
+      <button class="cc" id="copyEmail" type="button"><div class="cc-icon" style="background:rgba(77,159,255,.1);color:var(--blue)">✉</div><div class="cc-lbl">email · click to copy</div><div class="cc-val">ali.n.assad@gmail.com</div><div class="cc-arr">copy →</div></button>
+      <a class="cc" href="tel:+14036138920"><div class="cc-icon" style="background:rgba(52,211,153,.1);color:var(--teal)">☎</div><div class="cc-lbl">phone</div><div class="cc-val">+1 (403) 613-8920</div><div class="cc-arr">call →</div></a>
+      <a class="cc" href="https://linkedin.com/in/ali-assad-336019133" target="_blank" rel="noopener"><div class="cc-icon" style="background:rgba(77,159,255,.1);color:var(--blue)">in</div><div class="cc-lbl">linkedin</div><div class="cc-val">ali-assad-336019133</div><div class="cc-arr">view →</div></a>
+      <a class="cc" href="https://github.com/aliassad" target="_blank" rel="noopener"><div class="cc-icon" style="background:rgba(167,139,250,.1);color:var(--purple)">⌥</div><div class="cc-lbl">github</div><div class="cc-val">github.com/aliassad</div><div class="cc-arr">view →</div></a>
+      <div class="cc"><div class="cc-icon" style="background:rgba(251,146,60,.1);color:var(--orange)">⊕</div><div class="cc-lbl">location</div><div class="cc-val">Calgary, AB · Canada<br>MST · Remote Worldwide</div></div>
     </div>
   </div>
 </section>
 </main>
 
 <footer>
-  <div class="wrap">
-    <span>© <span id="yr">2026</span> Ali Assad, Calgary, Canada</span>
-    <span><a href="https://github.com/aliassad" target="_blank" rel="noopener">GitHub</a> &nbsp; <a href="#top">Back to top</a></span>
-  </div>
+  <span class="f-copy">// © <span id="yr">2026</span> Ali Assad · Calgary, Canada</span>
+  <div class="f-links"><a href="#skills" class="f-link">skills</a><a href="#experience" class="f-link">experience</a><a href="#projects" class="f-link">projects</a><a href="#awards" class="f-link">awards</a><a href="#contact" class="f-link">contact</a></div>
 </footer>
 
 <dialog id="palette" aria-label="Command palette">
   <div class="pal-in">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8FA3BF" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-    <input id="palIn" placeholder="Jump to a section or run an action" aria-label="Search commands" aria-controls="palList" role="combobox" aria-expanded="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8888aa" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input id="palIn" placeholder="Jump to a section or run an action" aria-label="Search commands" role="combobox" aria-controls="palList" aria-expanded="true">
     <kbd>Esc</kbd>
   </div>
   <ul class="pal-list" id="palList" role="listbox"></ul>
 </dialog>
-
 <div id="toast" role="status"></div>
 
-<script>
-(()=>{
-'use strict';
-const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
-const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-const fine=matchMedia('(pointer: fine)').matches;
-const store={get(k){try{return sessionStorage.getItem(k)}catch(e){return null}},set(k,v){try{sessionStorage.setItem(k,v)}catch(e){}}};
-const EMAIL='ali.n.assad@gmail.com';
-const CV='https://aliassad.github.io/portfolio/Ali%20Assad%20CV.pdf';
-$('#yr').textContent=new Date().getFullYear();
-
-/* ================= DATA ================= */
-const ROLES=[
- {co:'Swenggco',title:'Associate Engineer',when:'Oct 2016 to Apr 2017',yr:'2016',place:'Sialkot, Pakistan',
-  stack:['PHP','CodeIgniter','AngularJS','Android','MySQL'],
-  pts:['Built full-stack CodeIgniter and AngularJS apps for internal and client systems.','Developed native Android apps for mobile-first solutions.','Built Schroll ERP, automating workflows, reports and operations end to end.']},
- {co:'Bayt.com / VFairs',title:'Software Engineer',when:'May 2017 to Aug 2019',yr:'2017',place:'Lahore, Pakistan',
-  stack:['Yii2','Angular','AWS','PHP','Laravel'],metric:['99.9%','uptime, Top Performer Q2 2018'],
-  pts:['Built core modules for a virtual events platform handling thousands of concurrent users.','Created a no-code Angular website builder so clients needed zero dev skills.','Re-engineered SaaS admin panels, improving onboarding and automation.']},
- {co:'Arbisoft',title:'Software Engineer',when:'Aug 2019 to Feb 2022',yr:'2019',place:'Lahore, Pakistan',
-  stack:['Django','React','Open edX','Python','Docker'],metric:['50%','less setup time with Docker'],
-  pts:['Built interactive XBlocks on Open edX, lifting learning engagement by 20%.','Coordinated 20+ engineers on architecture consistency and CI/CD reliability.','Ran company-wide Clean Code workshops for 100+ engineers, cutting technical debt.']},
- {co:'AutoCenter LLC',title:'Principal Engineer & Team Lead',when:'May 2022 to Jun 2025',yr:'2022',place:'Dallas, USA (remote)',
-  stack:['Laravel','Yii2','Angular','React','Node.js','MySQL','Azure','Redis','Twilio','Mailchimp'],metric:['40%','faster response times'],
-  pts:['Architected a multi-tenant Dealer Management System serving 50+ dealerships.','Cut response times 40% with Laravel Horizon, Redis caching and queue tuning.','Integrated Azure Blob Storage for 1M+ documents; automated Mailchimp and Twilio pipelines for 25% more engagement.','Led and mentored an 8-engineer distributed team on standards, reviews and CI/CD.']},
- {co:'Saturn Experts',title:'Software Engineer',when:'Jul 2025 to present',yr:'2025',place:'Calgary, Canada',now:true,
-  stack:['Django','PHP','React','PostgreSQL','AWS'],
-  pts:['Building enterprise software focused on scalability and architectural quality.','Driving technical direction through code reviews and industry best practices.']}
-];
-const ICONS={
- car:'<path d="M5 16h14M6 16l1.5-5h9L18 16M4 16v3h3v-3M17 16v3h3v-3"/><circle cx="8" cy="16" r="1.2"/><circle cx="16" cy="16" r="1.2"/>',
- store:'<path d="M4 9l1.5-5h13L20 9M4 9h16v11H4zM9 20v-6h6v6"/>',
- book:'<path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2zM4 5v16M9 7h6"/>',
- stage:'<path d="M3 20h18M5 20V8l7-4 7 4v12M9 20v-5h6v5"/>',
- gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/>',
- vault:'<rect x="3" y="5" width="18" height="15" rx="2"/><circle cx="12" cy="12.5" r="3.5"/><path d="M12 9v1M7 20v1M17 20v1"/>'
-};
-const PROJECTS=[
- {name:'Auto Dealer Management System',icon:'car',where:'AutoCenter LLC',short:'Multi-tenant DMS for 50+ dealerships: CRM, inventory, billing and reporting.',
-  body:'A multi-tenant Dealer Management System serving 50+ dealerships, covering CRM, inventory, billing, reporting and RouteOne credit integration. Built to scale across hundreds of concurrent users, with Redis caching and Horizon queues cutting response times by 40%.',
-  stack:['Laravel','Yii2','React','Angular','MySQL','Azure','Redis']},
- {name:'Automotive Marketplace',icon:'store',where:'AutoCenter LLC',short:'An Angular marketplace connecting dealers and buyers.',
-  body:'An Angular marketplace connecting dealers and buyers. Redis-backed caching, Horizon queues and automated Mailchimp and Twilio pipelines that lifted engagement by 25%.',
-  stack:['Angular','Node.js','Redis','Twilio','Mailchimp','AWS']},
- {name:'Open edX Learning Platform',icon:'book',where:'Arbisoft',short:'Custom Open edX with interactive XBlocks and 20% higher engagement.',
-  body:'A customised Open edX platform with interactive XBlocks that raised learner engagement by 20%. I coordinated 20+ engineers on architecture, CI/CD and clean code standards, and containerised the stack with Docker to halve setup time.',
-  stack:['Django','Python','React','Open edX','Docker']},
- {name:'VFairs Virtual Events',icon:'stage',where:'Bayt.com / VFairs',short:'Virtual events for thousands of concurrent users, plus a no-code site builder.',
-  body:'A large-scale virtual events platform for thousands of concurrent users, plus a no-code Angular website builder so clients could manage event pages themselves. Delivered 99.9% uptime.',
-  stack:['Yii2','Angular','PHP','AWS','Laravel']},
- {name:'Schroll ERP',icon:'gear',where:'Swenggco',short:'An internal ERP automating workflows, reporting and operations.',
-  body:'An internal ERP automating business workflows, reporting and operations end to end. Migrated legacy PHP to a more scalable architecture, with an Android companion app.',
-  stack:['CodeIgniter','AngularJS','Android','MySQL','PHP']},
- {name:'Azure Document Vault',icon:'vault',where:'AutoCenter LLC',short:'Secure storage for 1M+ dealership files on Azure Blob.',
-  body:'Secure document management on Azure Blob Storage for more than a million dealership files, with encryption, access control and automated lifecycle policies built for compliance.',
-  stack:['Azure','Laravel','PHP','MySQL','Docker']}
-];
-const GROUPS=[
- ['Backend',['Laravel','Django','PHP','Python','Node.js','Yii2','CodeIgniter','Open edX']],
- ['Frontend and mobile',['React','Angular','AngularJS','Android']],
- ['Data and messaging',['PostgreSQL','MySQL','Redis','Twilio','Mailchimp']],
- ['Cloud and delivery',['AWS','Azure','Docker']]
-];
-
-/* ================= BOOT ================= */
-const boot=$('#boot');
-function endBoot(){boot.classList.add('done');document.removeEventListener('keydown',endBoot);boot.removeEventListener('click',endBoot);setTimeout(()=>boot.remove(),700);startHero()}
-if(reduce||store.get('booted')){boot.remove();requestAnimationFrame(startHero)}
-else{
-  store.set('booted','1');
-  document.addEventListener('keydown',endBoot,{once:true});boot.addEventListener('click',endBoot,{once:true});
-  const lines=['<b>$ deploy ali-assad --env=production</b>','pulling 10 years of experience  <i>ok</i>','linking laravel, django, react  <i>ok</i>','warming redis cache  <i>ok</i>','health check: calgary-1  <i>passing</i>','<b>live.</b>'];
-  const log=$('#bootLog'),bar=$('#bootBar');let i=0;
-  (function next(){if(!document.body.contains(boot))return;if(i<lines.length){log.innerHTML+=lines[i]+'\n';i++;bar.style.width=(i/lines.length*100)+'%';setTimeout(next,i===1?380:260)}else setTimeout(()=>{if(document.body.contains(boot)&&!boot.classList.contains('done'))endBoot()},350)})();
-}
-
-/* ================= HERO: variable-font name ================= */
-const nameEl=$('#name');
-nameEl.innerHTML=[...'Ali Assad'].map(c=>c===' '?'<span class="sp" aria-hidden="true"> </span>':`<span aria-hidden="true">${c}</span>`).join('');
-const letters=$$('span:not(.sp)',nameEl);
-let heroStarted=false;
-function startHero(){
-  if(heroStarted)return;heroStarted=true;
-  // load sequence: letters sweep from thin to bold, then settle
-  letters.forEach((l,i)=>{l.style.fontVariationSettings="'wght' 200,'wdth' 75,'opsz' 96";l.style.opacity=0;l.style.transform='translateY(.25em)';
-    setTimeout(()=>{l.style.transition='font-variation-settings .9s var(--ease),opacity .6s,transform .9s var(--ease),color .35s';l.style.opacity=1;l.style.transform='none';l.style.fontVariationSettings="'wght' 800,'wdth' 100,'opsz' 96";
-      setTimeout(()=>{l.style.fontVariationSettings="'wght' 500,'wdth' 92,'opsz' 96";setTimeout(()=>l.style.transition='',900)},500)},reduce?0:120+i*55)});
-  $$('.rv').forEach(el=>io.observe(el));
-}
-if(fine&&!reduce){
-  document.addEventListener('mousemove',e=>{
-    const r=nameEl.getBoundingClientRect();
-    if(e.clientY<r.top-160||e.clientY>r.bottom+160){letters.forEach(l=>{l.style.fontVariationSettings='';l.style.color=''});return}
-    letters.forEach(l=>{const b=l.getBoundingClientRect(),d=Math.hypot(e.clientX-(b.left+b.width/2),e.clientY-(b.top+b.height/2));
-      const t=Math.max(0,1-d/260);l.style.fontVariationSettings=`'wght' ${Math.round(500+300*t)},'wdth' ${Math.round(92-17*t)},'opsz' 96`;l.style.color=t>.55?'var(--lamp)':''});
-  },{passive:true});
-}
-
-/* ================= HERO: live system graph ================= */
-const cv=$('#graph'),ctx=cv.getContext('2d');
-const TECH=['Laravel','Django','React','Angular','Redis','PostgreSQL','MySQL','AWS','Azure','Docker','Node.js','Python','PHP','Yii2','Twilio','Queue','API','CDN'];
-let W,H,DPR,nodes=[],edges=[],packets=[],mouse={x:-999,y:-999},reqCount=0,lastLat=38;
-function layout(){
-  DPR=Math.min(devicePixelRatio||1,2);W=cv.clientWidth;H=cv.clientHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);
-  const count=W<700?11:TECH.length,cols=W<700?3:6,rows=Math.ceil(count/cols);
-  const x0=W<700?W*.08:W*.36,x1=W*.96,y0=H*.14,y1=H*.9;
-  nodes=[];for(let i=0;i<count;i++){const c=i%cols,r=Math.floor(i/cols);
-    const bx=x0+(x1-x0)*(c+.5)/cols+(Math.random()-.5)*(x1-x0)/cols*.55,by=y0+(y1-y0)*(r+.5)/rows+(Math.random()-.5)*(y1-y0)/rows*.5;
-    nodes.push({label:TECH[i],bx,by,x:bx,y:by,vx:0,vy:0,ph:Math.random()*6.28,heat:0})}
-  edges=[];const key=new Set();
-  nodes.forEach((n,i)=>{nodes.map((m,j)=>[j,Math.hypot(n.bx-m.bx,n.by-m.by)]).filter(p=>p[0]!==i).sort((a,b)=>a[1]-b[1]).slice(0,2).forEach(([j])=>{const k=i<j?i+'-'+j:j+'-'+i;if(!key.has(k)){key.add(k);edges.push([i,j])}})});
-}
-function spawn(fromIdx,n){for(let k=0;k<n;k++){const opts=edges.filter(e=>e[0]===fromIdx||e[1]===fromIdx);if(!opts.length)return;const e=opts[Math.random()*opts.length|0];const a=e[0]===fromIdx?e[0]:e[1],b=a===e[0]?e[1]:e[0];packets.push({a,b,t:-k*.12,sp:.008+Math.random()*.012,hops:2+Math.random()*3|0,warm:true})}}
-function ambient(){if(packets.length<(W<700?6:14)){const e=edges[Math.random()*edges.length|0];if(e)packets.push({a:e[0],b:e[1],t:0,sp:.004+Math.random()*.006,hops:1,warm:false})}}
-cv.addEventListener('pointermove',e=>{const r=cv.getBoundingClientRect();mouse.x=e.clientX-r.left;mouse.y=e.clientY-r.top},{passive:true});
-cv.addEventListener('pointerleave',()=>{mouse.x=mouse.y=-999});
-cv.addEventListener('click',e=>{const r=cv.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;let best=0,bd=1e9;nodes.forEach((n,i)=>{const d=Math.hypot(n.x-x,n.y-y);if(d<bd){bd=d;best=i}});nodes[best].heat=1;const n=8+Math.random()*6|0;spawn(best,n);reqCount+=n;$('#tReq').textContent=reqCount.toLocaleString();ripples.push({x,y,r:0})});
-const ripples=[];
-let running=true,visible=true;
-new IntersectionObserver(([e])=>{visible=e.isIntersecting},{threshold:0}).observe(cv);
-function tick(time){
-  if(visible){
-    ctx.clearRect(0,0,W,H);
-    // nodes physics: spring to base, repel from cursor
-    nodes.forEach(n=>{const dx=n.x-mouse.x,dy=n.y-mouse.y,d=Math.hypot(dx,dy);
-      if(d<150&&d>0){const f=(150-d)/150*1.6;n.vx+=dx/d*f;n.vy+=dy/d*f}
-      const fx=n.bx+Math.sin(time*.0004+n.ph)*8,fy=n.by+Math.cos(time*.0005+n.ph)*8;
-      n.vx+=(fx-n.x)*.02;n.vy+=(fy-n.y)*.02;n.vx*=.86;n.vy*=.86;if(!reduce){n.x+=n.vx;n.y+=n.vy}n.heat*=.96});
-    // edges
-    edges.forEach(([i,j])=>{const a=nodes[i],b=nodes[j];ctx.globalAlpha=Math.min(fade(a),fade(b));const mx=(a.x+b.x)/2,my=(a.y+b.y)/2,near=Math.max(0,1-Math.hypot(mx-mouse.x,my-mouse.y)/220);
-      ctx.strokeStyle=`rgba(127,178,255,${.16+near*.4})`;ctx.lineWidth=1+near;ctx.beginPath();ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke()});
-    ctx.globalAlpha=1;
-    // packets
-    if(!reduce)ambient();
-    packets=packets.filter(p=>{p.t+=reduce?0:p.sp;if(p.t<0)return true;const a=nodes[p.a],b=nodes[p.b];if(!a||!b)return false;
-      if(p.t>=1){b.heat=Math.max(b.heat,p.warm?.7:.25);if(--p.hops>0){const opts=edges.filter(e=>(e[0]===p.b||e[1]===p.b));const e=opts[Math.random()*opts.length|0];p.a=p.b;p.b=e[0]===p.b?e[1]:e[0];p.t=0;return true}return false}
-      const x=a.x+(b.x-a.x)*p.t,y=a.y+(b.y-a.y)*p.t;
-      ctx.fillStyle=p.warm?'#FFB45C':'rgba(238,241,245,.7)';ctx.shadowColor=p.warm?'#FFB45C':'transparent';ctx.shadowBlur=p.warm?12:0;
-      ctx.beginPath();ctx.arc(x,y,p.warm?3:1.8,0,6.283);ctx.fill();ctx.shadowBlur=0;return true});
-    // ripples
-    for(let i=ripples.length-1;i>=0;i--){const r=ripples[i];r.r+=reduce?100:4;const a=1-r.r/120;if(a<=0){ripples.splice(i,1);continue}ctx.strokeStyle=`rgba(255,180,92,${a})`;ctx.lineWidth=1.5;ctx.beginPath();ctx.arc(r.x,r.y,r.r,0,6.283);ctx.stroke()}
-    // node bodies + labels
-    ctx.font='500 12px "IBM Plex Mono",monospace';ctx.textBaseline='middle';
-    nodes.forEach(n=>{const near=Math.max(0,1-Math.hypot(n.x-mouse.x,n.y-mouse.y)/180),glow=Math.max(near,n.heat);
-      ctx.globalAlpha=fade(n);const w=ctx.measureText(n.label).width+22,h=26;
-      ctx.fillStyle=`rgba(26,41,64,${.85})`;ctx.strokeStyle=glow>.3?`rgba(255,180,92,${.4+glow*.6})`:'rgba(47,69,102,1)';ctx.lineWidth=1;
-      roundRect(n.x-w/2,n.y-h/2,w,h,13);ctx.fill();ctx.stroke();
-      ctx.fillStyle=glow>.3?'#FFE2BD':'#B7C5D8';ctx.fillText(n.label,n.x-w/2+11,n.y+.5)});
-    ctx.globalAlpha=1;
-    // latency jitter tied to packet load
-    if(time-lastLatT>700){lastLatT=time;const load=packets.filter(p=>p.warm).length;lastLat=Math.round(34+Math.random()*7+load*.6);$('#tLat').textContent=lastLat+' ms'}
-  }
-  requestAnimationFrame(tick);
-}
-let lastLatT=0;
-// keep the graph quiet behind the headline: fade nodes on the text side (desktop) and overall on small screens
-function fade(n){if(W<1000)return .5;return Math.max(.12,Math.min(1,(n.x-W*.42)/(W*.14)))}
-function roundRect(x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
-layout();requestAnimationFrame(tick);
-let rT;addEventListener('resize',()=>{clearTimeout(rT);rT=setTimeout(()=>{layout();setupCareer()},150)});
-
-/* portrait tilt */
-const por=$('#portrait');
-if(fine&&!reduce){por.addEventListener('pointermove',e=>{const r=por.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;por.style.transform=`rotateY(${(x-.5)*12}deg) rotateX(${(.5-y)*12}deg)`;por.style.setProperty('--gx',x*100+'%');por.style.setProperty('--gy',y*100+'%')});por.addEventListener('pointerleave',()=>por.style.transform='')}
-
-/* ================= STACK EXPLORER ================= */
-const usage=t=>ROLES.filter(r=>r.stack.includes(t)).length+PROJECTS.filter(p=>p.stack.includes(t)).length;
-$('#stackGrid').innerHTML=GROUPS.map(([g,list])=>`<div class="stack-group"><h3>${g}</h3><div class="chips">${list.map(t=>`<button class="chip" aria-pressed="false" data-tech="${t}">${t}<span class="n">${usage(t)}</span></button>`).join('')}</div></div>`).join('');
-let active=null;
-function setTech(t){
-  active=active===t?null:t;
-  $$('.chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.tech===active));
-  $$('.role').forEach(el=>{const has=active&&ROLES[el.dataset.i].stack.includes(active);el.classList.toggle('dim',!!active&&!has);el.classList.toggle('lit',!!has)});
-  $$('.proj').forEach(el=>{const has=active&&PROJECTS[el.dataset.i].stack.includes(active);el.classList.toggle('dim',!!active&&!has);el.classList.toggle('lit',!!has)});
-  $$('.tag[data-t]').forEach(el=>el.classList.toggle('hit',el.dataset.t===active));
-  const ro=$('#readout');
-  if(!active){ro.textContent='Nothing selected. Choose a technology above.';$('#clearTech').hidden=true;return}
-  const rs=ROLES.filter(r=>r.stack.includes(active)).map(r=>r.co),ps=PROJECTS.filter(p=>p.stack.includes(active));
-  ro.innerHTML=`<b>${active}</b>: used at ${rs.length?rs.join(', '):'no listed role'}, in ${ps.length} project${ps.length===1?'':'s'}. Roles and projects that use it are now highlighted below.`;
-  $('#clearTech').hidden=false;
-}
-$('#stackGrid').addEventListener('click',e=>{const c=e.target.closest('.chip');if(c)setTech(c.dataset.tech)});
-$('#clearTech').addEventListener('click',()=>setTech(active));
-
-/* ================= CAREER ================= */
-$('#track').innerHTML=ROLES.map((r,i)=>`<article class="role${r.now?' now':''}" data-i="${i}">
-  <div class="yr">${r.when}</div><h3>${r.co}</h3><div class="title">${r.title}</div><div class="place">${r.place}</div>
-  ${r.metric?`<div class="metric"><strong data-count="${r.metric[0]}">${r.metric[0]}</strong><span>${r.metric[1]}</span></div>`:''}
-  <ul>${r.pts.map(p=>`<li>${p}</li>`).join('')}</ul>
-  <div class="tags">${r.stack.map(t=>`<span class="tag" data-t="${t}">${t}</span>`).join('')}</div></article>`).join('');
-const pin=$('#careerPin'),track=$('#track'),careerSec=$('#career');
-let horiz=false;
-function setupCareer(){
-  horiz=!reduce&&innerWidth>900;
-  careerSec.classList.toggle('career-flat',!horiz);
-  if(horiz){const dist=track.scrollWidth-innerWidth;pin.style.setProperty('--pin-h',(innerHeight+Math.max(dist,0))+'px');}
-  else{pin.style.removeProperty('--pin-h');track.style.transform=''}
-  onScroll();
-}
-
-/* ================= PROJECTS ================= */
-$('#projGrid').innerHTML=PROJECTS.map((p,i)=>`<button class="proj" data-i="${i}" aria-haspopup="dialog">
-  <span class="glyph"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[p.icon]}</svg></span>
-  <h3>${p.name}</h3><p>${p.short}</p><span class="open">Open details <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 11l6-6M6 5h5v5"/></svg></span></button>`).join('');
-const dlg=$('#projDlg');
-function openProject(i){const p=PROJECTS[i];$('#dlgTitle').textContent=p.name;$('#dlgWhere').textContent=p.where;$('#dlgBody').textContent=p.body;
-  $('#dlgTags').innerHTML=p.stack.map(t=>`<span class="tag${t===active?' hit':''}">${t}</span>`).join('');dlg.showModal()}
-$('#projGrid').addEventListener('click',e=>{const c=e.target.closest('.proj');if(c)openProject(+c.dataset.i)});
-$('#dlgClose').addEventListener('click',()=>dlg.close());
-dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
-if(fine&&!reduce){$$('.proj').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
-  c.style.transform=`rotateY(${(x-.5)*10}deg) rotateX(${(.5-y)*10}deg) translateZ(0)`;c.style.setProperty('--mx',x*100+'%');c.style.setProperty('--my',y*100+'%')});
-  c.addEventListener('pointerleave',()=>c.style.transform='')})}
-
-/* ================= SCROLL ================= */
-const nav=$('#nav'),prog=$('#progress'),secs=['stack','career','projects','terminal','contact'].map(id=>document.getElementById(id));
-function onScroll(){
-  const y=scrollY,max=document.documentElement.scrollHeight-innerHeight;
-  prog.style.transform=`scaleX(${max>0?y/max:0})`;nav.classList.toggle('solid',y>40);
-  if(horiz){const top=pin.getBoundingClientRect().top+y,dist=pin.offsetHeight-innerHeight,p=Math.min(1,Math.max(0,(y-top)/dist));
-    track.style.transform=`translate3d(${-p*(track.scrollWidth-innerWidth)}px,0,0)`;$('#rail').style.width=p*100+'%';$('#careerBar').style.width=p*100+'%';
-    const idx=Math.min(ROLES.length-1,Math.floor(p*ROLES.length));$('#careerYr').textContent=ROLES[idx].yr}
-  let cur=null;secs.forEach(s=>{if(s.getBoundingClientRect().top<innerHeight*.45)cur=s.id});
-  $$('.nav-links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
-}
-addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.2});
-// count-up for career metrics
-const cio=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;cio.unobserve(e.target);if(reduce)return;const raw=e.target.dataset.count,num=parseFloat(raw),suf=raw.replace(/[\d.]/g,''),dec=raw.includes('.')?1:0;let s;
-  (function st(ts){s=s||ts;const p=Math.min(1,(ts-s)/1200),v=num*(1-Math.pow(1-p,3));e.target.textContent=v.toFixed(dec)+suf;if(p<1)requestAnimationFrame(st)})(performance.now())}),{threshold:.6});
-$$('[data-count]').forEach(el=>cio.observe(el));
-
-/* ================= MAGNETIC + HALO ================= */
-if(fine&&!reduce){
-  $$('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});b.addEventListener('pointerleave',()=>b.style.transform='')});
-  const halo=$('#halo');let hx=0,hy=0,tx=0,ty=0;
-  document.addEventListener('pointermove',e=>{tx=e.clientX;ty=e.clientY;halo.classList.toggle('big',!!e.target.closest('a,button,.chip,input'))},{passive:true});
-  (function f(){hx+=(tx-hx)*.2;hy+=(ty-hy)*.2;halo.style.transform=`translate(${hx}px,${hy}px)`;requestAnimationFrame(f)})();
-}else{$('#halo').remove()}
-
-/* ================= TOAST + COPY ================= */
-let tT;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(tT);tT=setTimeout(()=>t.classList.remove('on'),2200)}
-async function copyEmail(){try{await navigator.clipboard.writeText(EMAIL);toast('Email copied: '+EMAIL)}catch(e){toast(EMAIL)}}
-$('#copyEmail').addEventListener('click',copyEmail);
-
-/* ================= TERMINAL ================= */
-const out=$('#termOut'),tin=$('#termIn');
-const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-const pad=(s,n)=>s+' '.repeat(Math.max(1,n-s.length));
-const CMDS={
-  help:{d:'List every command',f:()=>Object.entries(CMDS).filter(([k,v])=>!v.hide).map(([k,v])=>`<span class="c">${pad(k,12)}</span><span class="m">${v.d}</span>`).join('\n')},
-  whoami:{d:'Who is Ali',f:()=>`<span class="b">Ali Assad</span>, principal software engineer in Calgary, Alberta.\n10+ years building multi-tenant platforms and leading distributed teams of up to 20 engineers.\nCurrently at <span class="g">Saturn Experts</span>.`},
-  experience:{d:'Career history',f:()=>ROLES.slice().reverse().map(r=>`<span class="c">${pad(r.when,22)}</span>${r.co}  <span class="m">${r.title}</span>`).join('\n')},
-  stack:{d:'Technologies by area',f:()=>GROUPS.map(([g,l])=>`<span class="b">${g}</span>\n  ${l.join(', ')}`).join('\n')},
-  projects:{d:'Notable projects',f:()=>PROJECTS.map((p,i)=>`<span class="c">[${i+1}]</span> ${p.name}  <span class="m">${p.where}</span>`).join('\n')+'\n<span class="m">Run "open 1" to read about a project.</span>'},
-  open:{d:'open <n>: project details',f:a=>{const p=PROJECTS[(+a[0]||0)-1];if(!p)return 'Usage: open <number>. Run "projects" to see the numbers.';setTimeout(()=>openProject(PROJECTS.indexOf(p)),250);return `Opening ${p.name}...`}},
-  impact:{d:'Numbers I have moved',f:()=>[['40%','faster API responses at AutoCenter'],['50+','dealerships on one multi-tenant platform'],['1M+','documents secured in Azure Blob'],['99.9%','uptime at VFairs'],['100+','engineers trained in Clean Code'],['50%','less setup time with Docker']].map(([a,b])=>`<span class="g">${pad(a,7)}</span>${b}`).join('\n')},
-  awards:{d:'Awards and education',f:()=>`Top Performer of the Quarter, VFairs (2018)\nNASCON'16 Web Programming, winner\nNASCON'15 Speed Programming, winner\nSoftech'15 Speed Programming, winner\n<span class="m">BSc Computer Science, GIFT University (2016)</span>`},
-  contact:{d:'How to reach me',f:()=>`email     <a href="mailto:${EMAIL}">${EMAIL}</a>\nphone     +1 (403) 613-8920\nlinkedin  <a href="https://linkedin.com/in/ali-assad-336019133" target="_blank" rel="noopener">ali-assad-336019133</a>\ngithub    <a href="https://github.com/aliassad" target="_blank" rel="noopener">aliassad</a>`},
-  email:{d:'Copy my email',f:()=>{copyEmail();return 'Copied '+EMAIL}},
-  cv:{d:'Get my CV',f:()=>`<a href="${CV}" target="_blank" rel="noopener">Ali Assad CV.pdf</a>`},
-  ping:{d:'Check that I am up',f:()=>[1,2,3].map(i=>`64 bytes from calgary-1: seq=${i} time=${(30+Math.random()*12).toFixed(1)} ms`).join('\n')+'\n<span class="g">Ali is online and replying to messages.</span>'},
-  clear:{d:'Clear the screen',f:()=>{out.innerHTML='';return null}},
-  sudo:{hide:true,f:a=>a.join(' ').match(/hire/)?`<span class="g">Permission granted.</span> Drafting an email to ${EMAIL}...\n<a href="mailto:${EMAIL}?subject=Let's%20work%20together">Open your mail app</a>`:'Nice try. Try "sudo hire ali".'},
-  ls:{hide:true,f:()=>'experience/  projects/  stack/  awards/  contact.txt  cv.pdf'},
-  exit:{hide:true,f:()=>'There is no exit. Only shipping.'}
-};
-const hist=[];let hi=0;
-function print(html){out.insertAdjacentHTML('beforeend',html+'\n');out.scrollTop=out.scrollHeight}
-function run(raw){const line=raw.trim();print(`<span class="g">ali@calgary ~ $</span> ${esc(line)}`);if(!line)return;hist.push(line);hi=hist.length;
-  const [c,...a]=line.split(/\s+/);const cmd=CMDS[c.toLowerCase()];
-  if(cmd){const r=cmd.f(a);if(r!==null)print(r)}else print(`command not found: ${esc(c)}. Type <span class="c">help</span> to see what works.`)}
-print('<span class="m">Welcome. This shell knows about my work.</span>\nType <span class="c">help</span> to begin.');
-$('#termForm').addEventListener('submit',e=>{e.preventDefault();run(tin.value);tin.value=''});
-tin.addEventListener('keydown',e=>{if(e.key==='ArrowUp'&&hi>0){tin.value=hist[--hi];e.preventDefault()}else if(e.key==='ArrowDown'){hi=Math.min(hist.length,hi+1);tin.value=hist[hi]||''}
-  else if(e.key==='Tab'){const m=Object.keys(CMDS).filter(k=>!CMDS[k].hide&&k.startsWith(tin.value));if(m.length===1){tin.value=m[0];e.preventDefault()}}});
-$('#termBox').addEventListener('click',e=>{if(!e.target.closest('a'))tin.focus({preventScroll:true})});
-$('#sugg').innerHTML=['whoami','experience','impact','projects','contact','sudo hire ali'].map(c=>`<button data-c="${c}">${c}</button>`).join('');
-$('#sugg').addEventListener('click',e=>{const b=e.target.closest('button');if(b)run(b.dataset.c)});
-
-/* ================= COMMAND PALETTE ================= */
-const pal=$('#palette'),palIn=$('#palIn'),palList=$('#palList');
-const go=id=>()=>document.getElementById(id).scrollIntoView({behavior:reduce?'auto':'smooth'});
-const ACTIONS=[
- ['Go to stack explorer','Section',go('stack')],['Go to career','Section',go('career')],['Go to projects','Section',go('projects')],
- ['Go to terminal','Section',()=>{go('terminal')();setTimeout(()=>tin.focus({preventScroll:true}),600)}],['Go to awards','Section',go('awards')],['Go to contact','Section',go('contact')],
- ['Copy email address','Action',copyEmail],['Open CV (PDF)','Action',()=>{location.href=CV}],['Open LinkedIn','Link',()=>{location.href='https://linkedin.com/in/ali-assad-336019133'}],['Open GitHub','Link',()=>{location.href='https://github.com/aliassad'}],
- ...PROJECTS.map((p,i)=>['Project: '+p.name,'Project',()=>{go('projects')();setTimeout(()=>openProject(i),500)}]),
- ...GROUPS.flatMap(g=>g[1]).map(t=>['Filter by '+t,'Stack',()=>{go('stack')();if(active!==t)setTech(t)}])
-];
-let filtered=ACTIONS,sel=0;
-function renderPal(){const q=palIn.value.toLowerCase().trim();filtered=ACTIONS.filter(a=>a[0].toLowerCase().includes(q));sel=Math.min(sel,Math.max(0,filtered.length-1));
-  palList.innerHTML=filtered.length?filtered.slice(0,40).map((a,i)=>`<li role="option" id="po${i}" aria-selected="${i===sel}" data-i="${i}"><span>${a[0]}</span><small>${a[1]}</small></li>`).join(''):'<li class="pal-empty">No matches. Try "projects" or "email".</li>';
-  palIn.setAttribute('aria-activedescendant','po'+sel);const s=palList.children[sel];if(s&&s.scrollIntoView)s.scrollIntoView({block:'nearest'})}
-function openPal(){palIn.value='';sel=0;renderPal();pal.showModal();palIn.focus()}
-function runPal(i){const a=filtered[i];if(!a)return;pal.close();a[2]()}
-palIn.addEventListener('input',()=>{sel=0;renderPal()});
-palIn.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){sel=(sel+1)%Math.max(1,filtered.length);renderPal();e.preventDefault()}else if(e.key==='ArrowUp'){sel=(sel-1+filtered.length)%Math.max(1,filtered.length);renderPal();e.preventDefault()}else if(e.key==='Enter'){runPal(sel);e.preventDefault()}});
-palList.addEventListener('click',e=>{const li=e.target.closest('li[data-i]');if(li)runPal(+li.dataset.i)});
-pal.addEventListener('click',e=>{if(e.target===pal)pal.close()});
-$('#openPal').addEventListener('click',openPal);
-const mac=/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent);$('#kHint').textContent=mac?'⌘K':'Ctrl K';
-document.addEventListener('keydown',e=>{
-  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();pal.open?pal.close():openPal()}
-  else if(e.key==='/'&&!/input|textarea/i.test(document.activeElement.tagName)&&!pal.open){e.preventDefault();openPal()}
-});
-
-/* easter egg: Konami code floods the graph */
-const K=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','b','a'];let kp=0;
-document.addEventListener('keydown',e=>{kp=e.key===K[kp]?kp+1:(e.key===K[0]?1:0);if(kp===K.length){kp=0;nodes.forEach((n,i)=>{n.heat=1;spawn(i,4)});reqCount+=nodes.length*4;$('#tReq').textContent=reqCount.toLocaleString();toast('Load test passed. All nodes healthy.');scrollTo({top:0,behavior:'smooth'})}});
-
-setupCareer();onScroll();
-})();
-</script>
+<script src="js/core.js"></script>
+<script src="js/hero.js"></script>
+<script src="js/sections.js"></script>
+<script src="js/terminal.js"></script>
 </body>
 </html>
