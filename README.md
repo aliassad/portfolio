@@ -1,21 +1,23 @@
-# Ali Assad: portfolio
+# Ali Assad · Portfolio
 
-Live at https://aliassad.github.io/portfolio/
+Live: https://aliassad.github.io/portfolio/
 
-A single-file, dependency-free interactive portfolio (plain HTML, CSS and JavaScript), served by GitHub Pages with no build step.
+A static, build-free portfolio in a terminal/code theme with Apple-style scroll storytelling.
 
-## Interactive features
+## Highlights
+- Scroll-driven about scene: the portrait expands to full screen while the statement reveals word by word
+- Sticky experience stage that swaps company plates (Saturn Experts, AutoCenter, Arbisoft, Bayt.com/VFairs, Swenggco) as you scroll
+- Skill logo pills that filter experience and projects by technology
+- Animated SVG illustration for every project, plus a live architecture diagram
+- Orbiting tech icons, particle network, count-up stats with progress rings
+- Terminal (`help`) and command palette (`Ctrl/Cmd+K` or `/`)
+- Respects `prefers-reduced-motion`; responsive down to mobile
 
-- **Live system graph** in the hero: click anywhere to send request packets through the stack; nodes react to the cursor.
-- **Variable-font name** that thickens and narrows as the cursor approaches.
-- **Stack explorer**: pick a technology to highlight every role and project that used it.
-- **Horizontal career timeline** pinned to the scroll on desktop (vertical on mobile).
-- **Project cards** with 3D tilt that open into detail dialogs.
-- **Terminal**: try `help`, `whoami`, `impact`, `projects`, `open 1`, `sudo hire ali`.
-- **Command palette**: press `Ctrl K` / `⌘K` or `/`.
-- Short boot sequence (once per session, skippable), magnetic buttons, cursor halo, scroll progress.
-- Respects `prefers-reduced-motion`, works with a keyboard, and adapts down to mobile.
-
-## Editing content
-
-All roles, projects and stack groups live in the `ROLES`, `PROJECTS` and `GROUPS` arrays near the top of the `<script>` in `index.html`. Change them there and every section, filter, the terminal and the command palette update together.
+## Structure
+```
+index.html
+css/  base.css  sections.css  fx.css
+js/   core.js  hero.js  sections.js  terminal.js
+profile.webp
+```
+Company logos are loaded from each company's site with text fallbacks. Open `index.html` through any static server to preview.
